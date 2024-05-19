@@ -207,11 +207,45 @@ a{
   margin-bottom: 1px;
 }
 
-#culture .col-md-3{
-  border-radius: 10px;
-}
-
 .image{
   border-radius: 10px;
 }
 
+#package{
+  text-align: center;
+  padding-top: 90px;
+}
+
+#package b{
+  text-align: center;
+  padding-top: 90px;
+  font-size: 40px;
+}
+
+#package p{
+  text-align: center;
+  text-align: center;
+  padding-top: 1px;
+  margin-top: 1px; 
+  margin-bottom: 1px;
+}
+
+#package .card{
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  height: 300px;
+  margin-left: 40px;
+  margin-top: 70px;
+
+}
+
+#package .card .card-body .row{
+  align-items: center;
+  justify-content: center;
+}
+
+ #package .card{
+  background-image: url('./assets/images/coklat.png');
+  background-repeat: repeat-x;
+ }

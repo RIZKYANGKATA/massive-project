@@ -8,6 +8,7 @@ import baliImage from './assets/images/bali.jpg';
 import lombok1Image from './assets/images/lombok1.jpg';
 import surabayaImage from './assets/images/surabaya.jpg';
 import bandungImage from './assets/images/bandung.jpg';
+import tobaImage from './assets/images/toba.png';
 
 import './App.css';
 import Card from './components/card';
@@ -208,7 +209,24 @@ function App() {
         </div>
       </div>
     </div>
+    </div>
 
+    <div id="package">
+    <h6>PAKET POPULER</h6>
+    <b>JELAJAHI PAKET KAMI</b>
+    <p>Temukan paket perjalanan terbaik yang sesuai dengan kebutuhan Anda! Mulai dari liburan keluarga hingga petualangan</p>
+    <p>solo, kami memiliki beragam pilihan untuk memenuhi keinginan liburan Anda. Rasakan pengalaman yang tak terlupakan</p>
+    <p>dan buat kenangan indah bersama kami.</p>
+
+    <div class="card">
+      <div class="card-body">
+      <div className="row">
+        <div className="col-md-3">
+          <img src={tobaImage} className="img-fluid image" style={{ height: '295px', width: '1200px'}} alt="Teman Wisata 1" />
+        </div>
+      </div>
+      </div>
+    </div>
 
     </div>
 
