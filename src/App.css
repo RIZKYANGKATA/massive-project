@@ -149,5 +149,42 @@ a{
   height: 40px;
   align-items: end;
   justify-content: end;
+  border: #011526;
+}
+
+#destination{
+  text-align: center;
+  padding-top: 90px;
+}
+
+#destination b{
+  text-align: center;
+  padding-top: 90px;
+  font-size: 40px;
+}
+
+#destination p{
+  text-align: center;
+  text-align: center;
+  padding-top: 1px;
+  margin-top: 1px; 
+  margin-bottom: 1px;
+}
+
+#destination .container{
+  text-align: center;
+  padding-top: 50px;
+} 
+
+.btn-destination{
+  border-radius: 100px;
+  background-color: #011526;
+  color: white;
+  width: 180px;
+  height: 40px;
+  align-items: end;
+  justify-content: end;
+  border: #011526;
+  margin-top: 20px;
 }
 

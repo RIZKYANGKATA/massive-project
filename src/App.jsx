@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import temanWisataImage from './assets/temanWisata.png';
+import backgroundImage from './assets/background.jpg';
+import bromoImage from './assets/bromo.jpg'; 
+import pulauDerawanImage from './assets/pulauDerawan.jpg';
 import './App.css';
+import Card from './components/card';
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -28,7 +33,7 @@ function App() {
         <ul className="inline-list">
           <li><a href="#home">HOME</a></li>
           <li><a href="#aboutUs">ABOUT US</a></li>
-          <li><a href="">DESTINATION</a></li>
+          <li><a href="#destination">DESTINATION</a></li>
           <li><a href="">CULTURE</a></li>
           <li><a href="">PACKAGE</a></li>
           <li><a href="">CONTACT US</a></li>
@@ -72,13 +77,13 @@ function App() {
         <div class="col">
           Chekin Date *
           <form className="d" role="search">
-              <input className="form-control me-2" type="search" placeholder="HH/BB/TTTT" aria-label="Search" />
+              <input className="form-control me-2" type="date" placeholder="HH/BB/TTTT" aria-label="Search" />
             </form>
         </div>
         <div class="col">
           Chekout Date *
           <form className="d" role="search">
-              <input className="form-control me-2" type="search" placeholder="HH/BB/TTTT" aria-label="Search" />
+              <input className="form-control me-2" type="date" placeholder="HH/BB/TTTT" aria-label="Search" />
             </form>
         </div>
 
@@ -98,10 +103,53 @@ function App() {
         <div class="col">
           <b>TENTANG KAMI</b>
           <p>"Website ini membantu para traveler, wisatawan, dan backpacker yang kesulitan mencari informasi tentang tempat wisata unik dengan budaya dan tradisi setempat. Kami menawarkan pengalaman berbeda dan berkesan, serta mengembangkan strategi pemasaran inovatif dan bertanggung jawab untuk menarik lebih banyak pengunjung dan memperpanjang masa tinggal mereka. Kami juga menerapkan praktik berkelanjutan untuk melestarikan sumber daya alam."</p>
-          <a href="#home"><button className="btn-aboutUs" type="submit">SELENGKAPNYA</button></a>
+          <a href=""><button className="btn-aboutUs" type="submit">SELENGKAPNYA</button></a>
         </div>
       </div>
     </div>
+    </div>
+
+    <div id="destination">
+      <h6>TEMUKAN TEMPAT</h6>
+      <b>DESTINASI POPULER</b>
+      <p>Temukan tempat-tempat terkenal yang menakjubkan di sini! Dengan beragam pilihan mulai dari alam yang memesona</p>
+      <p>hingga situs bersejarah yang menarik, ada sesuatu untuk semua orang. Jelajahi keindahan yang menakjubkan dan nikmati</p>
+      <p>pengalaman tak terlupakan.</p>
+
+      <div class="container text-center">
+        <div class="row align-items-center">
+          <div class="col">
+          <Card
+              imageUrl={backgroundImage} 
+              title="Pulau Weh, Aceh"
+              subTitle="Aceh"
+              description="Pulau Weh memiliki keistimewaan menjadi tempat di mana garis lintang 0 derajat atau dikenal Kilometer 0 Indonesia. "
+              harga="RP 560.000"
+            />
+          </div>
+          <div class="col">
+          <Card
+              imageUrl={bromoImage}
+              title="Bromo"
+              subTitle="Jawa Timur"
+              description="Gunung berapi aktif di Jawa Timur, Indonesia. Memiliki ketinggian 2.329 meter di atas permukaan laut"
+              harga="RP 560.000"
+            />
+          </div>
+          <div class="col">
+          <Card
+              imageUrl={pulauDerawanImage}
+              title="Pulau Derawan"
+              subTitle="Kalimantan Timur"
+              description="kepulauan ini terdapat sejumlah objek wisata bahari menawan, salah satunya Taman Bawah Laut"
+              harga="RP 560.000"
+            />
+          </div>
+        </div>
+        <a href=""><button className="btn-destination" type="submit">MORE DESTINATION</button></a>
+      </div>
+
+
     </div>
 
 
