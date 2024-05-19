@@ -17,6 +17,8 @@ import niasImage from './assets/images/nias.jpg';
 import papuaImage from './assets/images/papua.jpg';
 import banyuwangiImage from './assets/images/banyuwangi.jpg';
 import tobaImage from './assets/images/toba.png';
+import palembangImage from './assets/images/palembang.png';
+import semarangImage from './assets/images/semarang.png';
 
 import './App.css';
 import Card from './components/card';
@@ -49,7 +51,7 @@ function App() {
           <li><a href="#aboutUs">ABOUT US</a></li>
           <li><a href="#destination">DESTINATION</a></li>
           <li><a href="#culture">CULTURE</a></li>
-          <li><a href="">PACKAGE</a></li>
+          <li><a href="#package">PACKAGE</a></li>
           <li><a href="">CONTACT US</a></li>
           <li><button className="btn" type="submit">SIGN UP</button></li>
           <li><button className="btn" type="submit">LOGIN</button></li>
@@ -272,6 +274,26 @@ function App() {
       </div>
     </div>
 
+    <div class="card">
+      <div class="card-body">
+      <div className="row">
+        <div className="col-md-3">
+          <img src={semarangImage} className="img-fluid image" style={{ height: '295px', width: '1200px'}} alt="Teman Wisata 1" />
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+      <div className="row">
+        <div className="col-md-3">
+          <img src={palembangImage} className="img-fluid image" style={{ height: '295px', width: '1200px'}} alt="Teman Wisata 1" />
+        </div>
+      </div>
+      </div>
+    </div>
+    <a href=""><button className="btn-destination" type="submit">VIEW ALL PACKAGES</button></a>
     </div>
 
 
