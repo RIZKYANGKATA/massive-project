@@ -188,6 +188,24 @@ a{
   margin-top: 20px;
 }
 
+.text-overlay-1{
+  padding-top: 255px;
+  margin-left: 100px;
+  color: white;
+}
+
+.text-overlay-2{
+  padding-top: 255px;
+  margin-left: 90px;
+  color: white;
+}
+
+.text-overlay-3{
+  padding-top: 255px;
+  margin-left: 90px;
+  color: white;
+}
+
 #culture{
   text-align: center;
   padding-top: 90px;

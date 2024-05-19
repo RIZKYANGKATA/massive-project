@@ -8,6 +8,14 @@ import baliImage from './assets/images/bali.jpg';
 import lombok1Image from './assets/images/lombok1.jpg';
 import surabayaImage from './assets/images/surabaya.jpg';
 import bandungImage from './assets/images/bandung.jpg';
+import komodoImage from './assets/images/komodo.jpg';
+import yogyakartaImage from './assets/images/yogyakarta.jpg';
+import kalselImage from './assets/images/kalsel.jpg';
+import jakartaImage from './assets/images/jakarta.jpg';
+import sulselImage from './assets/images/sulsel.jpg';
+import niasImage from './assets/images/nias.jpg';
+import papuaImage from './assets/images/papua.jpg';
+import banyuwangiImage from './assets/images/banyuwangi.jpg';
 import tobaImage from './assets/images/toba.png';
 
 import './App.css';
@@ -165,47 +173,83 @@ function App() {
 
       <div className="container mt-5">
       <div className="row">
-        <div className="col-md-3">
+        <div className="col-md-3 position-relative">
           <img src={baliImage} className="img-fluid image" alt="Teman Wisata 1" />
+          <div className="text-overlay-1 position-absolute top-0 start-0">
+          <h3>Bali</h3>
+          </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 position-relative">
           <img src={lombok1Image} className="img-fluid image" alt="Teman Wisata 2" />
+          <div className="text-overlay-1 position-absolute top-0 start-0">
+          <h3>Lombok</h3>
+          </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 position-relative">
           <img src={surabayaImage} className="img-fluid image" alt="Teman Wisata 3" />
+          <div className="text-overlay-1 position-absolute top-0 start-0">
+          <h3>Surabaya</h3>
+          </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 position-relative">
           <img src={bandungImage} className="img-fluid image" alt="Teman Wisata 4" />
+          <div className="text-overlay-1 position-absolute top-0 start-0">
+          <h3>Bandung</h3>
+          </div>
         </div>
       </div>
       <br />
       <div className="row">
-        <div className="col-md-3">
-          <img src={baliImage} className="img-fluid image" alt="Teman Wisata 1" />
+        <div className="col-md-3 position-relative">
+          <img src={komodoImage} className="img-fluid image" alt="Teman Wisata 1" />
+          <div className="text-overlay-2 position-absolute top-0 start-0">
+          <h3>Komodo</h3>
+          </div>
         </div>
-        <div className="col-md-3">
-          <img src={lombok1Image} className="img-fluid image" alt="Teman Wisata 2" />
+        <div className="col-md-3 position-relative">
+          <img src={yogyakartaImage} className="img-fluid image" alt="Teman Wisata 2" />
+          <div className="text-overlay-2 position-absolute top-0 start-0">
+          <h3>Yogyakarta</h3>
+          </div>
         </div>
-        <div className="col-md-3">
-          <img src={surabayaImage} className="img-fluid image" alt="Teman Wisata 3" />
+        <div className="col-md-3 position-relative">
+          <img src={kalselImage} className="img-fluid image" alt="Teman Wisata 3" />
+          <div className="text-overlay-2 position-absolute top-0 start-0">
+          <h3>Kalimantan</h3>
+          </div>
         </div>
-        <div className="col-md-3">
-          <img src={bandungImage} className="img-fluid image" alt="Teman Wisata 4" />
+        <div className="col-md-3 position-relative">
+          <img src={jakartaImage} className="img-fluid image" alt="Teman Wisata 4" />
+          <div className="text-overlay-2 position-absolute top-0 start-0">
+          <h3>Jakarta</h3>
+          </div>
         </div>
       </div>
       <br />
       <div className="row">
-        <div className="col-md-3">
-          <img src={baliImage} className="img-fluid image" alt="Teman Wisata 1" />
+        <div className="col-md-3 position-relative">
+          <img src={sulselImage} className="img-fluid image" alt="Teman Wisata 1" />
+          <div className="text-overlay-3 position-absolute top-0 start-0">
+          <h3>Sulawesi</h3>
+          </div>
         </div>
-        <div className="col-md-3">
-          <img src={lombok1Image} className="img-fluid image" alt="Teman Wisata 2" />
+        <div className="col-md-3 position-relative">
+          <img src={niasImage} className="img-fluid image" alt="Teman Wisata 2" />
+          <div className="text-overlay-3 position-absolute top-0 start-0">
+          <h3>Nias</h3>
+          </div>
         </div>
-        <div className="col-md-3">
-          <img src={surabayaImage} className="img-fluid image" alt="Teman Wisata 3" />
+        <div className="col-md-3 position-relative">
+          <img src={banyuwangiImage} className="img-fluid image" alt="Teman Wisata 3" />
+          <div className="text-overlay-3 position-absolute top-0 start-0">
+          <h3>Banyuwangi</h3>
+          </div>
         </div>
-        <div className="col-md-3">
-          <img src={bandungImage} className="img-fluid image" alt="Teman Wisata 4" />
+        <div className="col-md-3 position-relative">
+          <img src={papuaImage} className="img-fluid image" alt="Teman Wisata 4" />
+          <div className="text-overlay-3 position-absolute top-0 start-0">
+          <h3>Papua</h3>
+          </div>
         </div>
       </div>
     </div>
