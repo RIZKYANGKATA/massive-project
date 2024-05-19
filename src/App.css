@@ -63,7 +63,7 @@ a{
   color: white;
 }
 
-.home{
+#home{
   background-image: url('./assets/background.jpg');
   background-size: cover; 
   background-position: absolute; 
@@ -115,6 +115,8 @@ a{
 .booking{
   padding-top: 50px;
   gap: 15px;
+  background-color: #F2DCC2 ;
+  height: 280px;
 }
 
 .form-control{
@@ -128,3 +130,24 @@ a{
 .btn-booking{
   padding-top: 60px;
 }
+
+#aboutUs b{
+  font-size: 40px;
+  padding-top: 10px;
+  text-align: start;
+}
+
+.aboutUs p{
+  text-align: start;
+}
+
+.btn-aboutUs{
+  border-radius: 100px;
+  background-color: #011526;
+  color: white;
+  width: 180px;
+  height: 40px;
+  align-items: end;
+  justify-content: end;
+}
+

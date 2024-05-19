@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className="home">
+      <div id="home">
       <div className="header">
         <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
@@ -26,8 +26,8 @@ function App() {
 
       <div className="navbar">
         <ul className="inline-list">
-          <li><a href="">HOME</a></li>
-          <li><a href="">ABOUT US</a></li>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#aboutUs">ABOUT US</a></li>
           <li><a href="">DESTINATION</a></li>
           <li><a href="">CULTURE</a></li>
           <li><a href="">PACKAGE</a></li>
@@ -88,6 +88,23 @@ function App() {
       </div>
     </div>
     </div>
+
+    <div id="aboutUs">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+        <img src={temanWisataImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '80%', height: '80%', backgroundColor: '#F2DCC2', marginTop: '50px', borderRadius: '50px' }} />
+        </div>
+        <div class="col">
+          <b>TENTANG KAMI</b>
+          <p>"Website ini membantu para traveler, wisatawan, dan backpacker yang kesulitan mencari informasi tentang tempat wisata unik dengan budaya dan tradisi setempat. Kami menawarkan pengalaman berbeda dan berkesan, serta mengembangkan strategi pemasaran inovatif dan bertanggung jawab untuk menarik lebih banyak pengunjung dan memperpanjang masa tinggal mereka. Kami juga menerapkan praktik berkelanjutan untuk melestarikan sumber daya alam."</p>
+          <a href="#home"><button className="btn-aboutUs" type="submit">SELENGKAPNYA</button></a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
     </>
   );
 }
