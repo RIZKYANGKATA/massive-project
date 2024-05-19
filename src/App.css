@@ -64,16 +64,16 @@ a{
 }
 
 #home{
-  background-image: url('./assets/background.jpg');
+  background-image: url('./assets/images/background.jpg');
   background-size: cover; 
   background-position: absolute; 
   background-repeat: no-repeat; 
   height: 100vh;
 }
 
-.image{
+/* .image{
   opacity: 0.5;
-}
+} */
 
 .inline-list {
   position: sticky;
@@ -186,5 +186,32 @@ a{
   justify-content: end;
   border: #011526;
   margin-top: 20px;
+}
+
+#culture{
+  text-align: center;
+  padding-top: 90px;
+}
+
+#culture b{
+  text-align: center;
+  padding-top: 90px;
+  font-size: 40px;
+}
+
+#culture p{
+  text-align: center;
+  text-align: center;
+  padding-top: 1px;
+  margin-top: 1px; 
+  margin-bottom: 1px;
+}
+
+#culture .col-md-3{
+  border-radius: 10px;
+}
+
+.image{
+  border-radius: 10px;
 }
 

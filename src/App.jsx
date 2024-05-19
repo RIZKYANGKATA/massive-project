@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import temanWisataImage from './assets/temanWisata.png';
-import backgroundImage from './assets/background.jpg';
-import bromoImage from './assets/bromo.jpg'; 
-import pulauDerawanImage from './assets/pulauDerawan.jpg';
+import temanWisataImage from './assets/images/temanWisata.png';
+import backgroundImage from './assets/images/background.jpg';
+import bromoImage from './assets/images/bromo.jpg'; 
+import pulauDerawanImage from './assets/images/pulauDerawan.jpg';
+import baliImage from './assets/images/bali.jpg';
+import lombok1Image from './assets/images/lombok1.jpg';
+import surabayaImage from './assets/images/surabaya.jpg';
+import bandungImage from './assets/images/bandung.jpg';
+
 import './App.css';
 import Card from './components/card';
 
@@ -34,7 +39,7 @@ function App() {
           <li><a href="#home">HOME</a></li>
           <li><a href="#aboutUs">ABOUT US</a></li>
           <li><a href="#destination">DESTINATION</a></li>
-          <li><a href="">CULTURE</a></li>
+          <li><a href="#culture">CULTURE</a></li>
           <li><a href="">PACKAGE</a></li>
           <li><a href="">CONTACT US</a></li>
           <li><button className="btn" type="submit">SIGN UP</button></li>
@@ -148,6 +153,61 @@ function App() {
         </div>
         <a href=""><button className="btn-destination" type="submit">MORE DESTINATION</button></a>
       </div>
+    </div>
+
+    <div id="culture">
+      <h6>TEMUKAN BUDAYA</h6>
+      <b>DESTINASI BUDAYA</b>
+      <p>Temukan tempat-tempat budaya  yang menakjubkan di sini! Dengan beragam pilihan mulai dari festival tradisional hingga</p>
+      <p>warisan arsitektur yang memukau, ada sesuatu untuk semua orang. Jelajahi kekayaan budaya yang menakjubkan dan</p>
+      <p>nikmati pengalaman tak terlupakan.</p>
+
+      <div className="container mt-5">
+      <div className="row">
+        <div className="col-md-3">
+          <img src={baliImage} className="img-fluid image" alt="Teman Wisata 1" />
+        </div>
+        <div className="col-md-3">
+          <img src={lombok1Image} className="img-fluid image" alt="Teman Wisata 2" />
+        </div>
+        <div className="col-md-3">
+          <img src={surabayaImage} className="img-fluid image" alt="Teman Wisata 3" />
+        </div>
+        <div className="col-md-3">
+          <img src={bandungImage} className="img-fluid image" alt="Teman Wisata 4" />
+        </div>
+      </div>
+      <br />
+      <div className="row">
+        <div className="col-md-3">
+          <img src={baliImage} className="img-fluid image" alt="Teman Wisata 1" />
+        </div>
+        <div className="col-md-3">
+          <img src={lombok1Image} className="img-fluid image" alt="Teman Wisata 2" />
+        </div>
+        <div className="col-md-3">
+          <img src={surabayaImage} className="img-fluid image" alt="Teman Wisata 3" />
+        </div>
+        <div className="col-md-3">
+          <img src={bandungImage} className="img-fluid image" alt="Teman Wisata 4" />
+        </div>
+      </div>
+      <br />
+      <div className="row">
+        <div className="col-md-3">
+          <img src={baliImage} className="img-fluid image" alt="Teman Wisata 1" />
+        </div>
+        <div className="col-md-3">
+          <img src={lombok1Image} className="img-fluid image" alt="Teman Wisata 2" />
+        </div>
+        <div className="col-md-3">
+          <img src={surabayaImage} className="img-fluid image" alt="Teman Wisata 3" />
+        </div>
+        <div className="col-md-3">
+          <img src={bandungImage} className="img-fluid image" alt="Teman Wisata 4" />
+        </div>
+      </div>
+    </div>
 
 
     </div>
