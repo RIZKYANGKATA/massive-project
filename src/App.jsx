@@ -21,7 +21,9 @@ import palembangImage from './assets/images/palembang.png';
 import semarangImage from './assets/images/semarang.png';
 import logo_putihImage from './assets/images/logo_putih.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt} from 'react-icons/fa';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
 
 import './App.css';
 import Card from './components/card';
@@ -33,23 +35,11 @@ function App() {
   return (
     <>
       <div id="home">
-      <div className="header">
-        <nav className="navbar navbar-expand-lg navbar-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+      <div className="header fixed-top">
+      <div className="navbar">
+      <a className="navbar-brand" href="#">
             <img src={logo_putihImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '100px', height: '80px' }} />
           </a>
-          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="" aria-label="Search" />
-            </form>
-          </div>
-        </div>
-      </nav>
-      </div>
-
-
-      <div className="navbar">
         <ul className="inline-list">
           <li><a href="#home">HOME</a></li>
           <li><a href="#aboutUs">ABOUT US</a></li>
@@ -60,9 +50,11 @@ function App() {
           <li><button className="btn" type="submit">SIGN UP</button></li>
           <li><button className="btn" type="submit">LOGIN</button></li>
         </ul>
+        <form className="d-flex" role="search">
+              <input className="form-control me-2" type="search" placeholder="" aria-label="Search" />
+            </form>
       </div>
-      
-     
+      </div>
 
       <div className="conten">
         <div className="title">
@@ -106,10 +98,7 @@ function App() {
               <input className="form-control me-2" type="date" placeholder="HH/BB/TTTT" aria-label="Search" />
             </form>
         </div>
-
         <p className="btn-booking"><button className="btn" type="submit">CARI SEKARANG</button></p>
-        
-
       </div>
     </div>
     </div>
@@ -118,7 +107,7 @@ function App() {
     <div class="container">
       <div class="row align-items-center">
         <div class="col">
-        <img src={temanWisataImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '80%', height: '80%', backgroundColor: '#F2DCC2', marginTop: '50px', borderRadius: '50px' }} />
+        <img src={temanWisataImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '80%', height: '80%', backgroundColor: '#EEE8DC', marginTop: '50px', borderRadius: '50px' }} />
         </div>
         <div class="col">
           <b>TENTANG KAMI</b>
@@ -145,6 +134,7 @@ function App() {
               subTitle="Aceh"
               description="Pulau Weh memiliki keistimewaan menjadi tempat di mana garis lintang 0 derajat atau dikenal Kilometer 0 Indonesia. "
               harga="RP 560.000"
+              rating={4}
             />
           </div>
           <div class="col">
@@ -154,15 +144,17 @@ function App() {
               subTitle="Jawa Timur"
               description="Gunung berapi aktif di Jawa Timur, Indonesia. Memiliki ketinggian 2.329 meter di atas permukaan laut"
               harga="RP 560.000"
+              rating={5}
             />
           </div>
           <div class="col">
           <Card
               imageUrl={pulauDerawanImage}
-              title="Pulau Derawan"
+              title="Pulau Derawan" 
               subTitle="Kalimantan Timur"
               description="kepulauan ini terdapat sejumlah objek wisata bahari menawan, salah satunya Taman Bawah Laut"
               harga="RP 560.000"
+              rating={4}
             />
           </div>
         </div>

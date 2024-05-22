@@ -7,8 +7,9 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  height: 70px;
-  
+  height: 75px;
+  padding-top: -20px;
+  background-color: #152D47;
 }
 
 a{
@@ -53,7 +54,7 @@ a{
 
 .conten{
   text-align: center;
-  padding-top: 75px;
+  padding-top: 200px;
   font-size: 60px;
   background-image: url('');
   color: white;
@@ -67,12 +68,19 @@ a{
   border-radius: 100px;
   background-color: #011526;
   color: white;
+  
 }
+
+.btn:hover{
+  color: #011526;
+  background-color: white;
+}
+
 
 .booking{
   padding-top: 50px;
   gap: 15px;
-  background-color: #F2DCC2 ;
+  background-color: #EEE8DC ;
   height: 280px;
 }
 
@@ -290,3 +298,19 @@ a{
   text-align: center;
   padding-top: 10px;
  }
+
+ .navbar-brand{
+  margin-right: 30px;
+  margin-top: -20px;
+ }
+
+ .d-flex{
+  margin-top: -50px;
+  padding-top: 50px;
+ }
+
+ .star-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
