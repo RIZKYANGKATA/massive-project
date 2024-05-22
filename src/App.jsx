@@ -19,6 +19,9 @@ import banyuwangiImage from './assets/images/banyuwangi.jpg';
 import tobaImage from './assets/images/toba.png';
 import palembangImage from './assets/images/palembang.png';
 import semarangImage from './assets/images/semarang.png';
+import logo_putihImage from './assets/images/logo_putih.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 import './App.css';
 import Card from './components/card';
@@ -34,7 +37,7 @@ function App() {
         <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            <img src={temanWisataImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '80px', height: '60px' }} />
+            <img src={logo_putihImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '100px', height: '80px' }} />
           </a>
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <form className="d-flex" role="search">
@@ -45,6 +48,7 @@ function App() {
       </nav>
       </div>
 
+
       <div className="navbar">
         <ul className="inline-list">
           <li><a href="#home">HOME</a></li>
@@ -52,7 +56,7 @@ function App() {
           <li><a href="#destination">DESTINATION</a></li>
           <li><a href="#culture">CULTURE</a></li>
           <li><a href="#package">PACKAGE</a></li>
-          <li><a href="">CONTACT US</a></li>
+          <li><a href="#contactUs">CONTACT US</a></li>
           <li><button className="btn" type="submit">SIGN UP</button></li>
           <li><button className="btn" type="submit">LOGIN</button></li>
         </ul>
@@ -296,8 +300,49 @@ function App() {
     <a href=""><button className="btn-destination" type="submit">VIEW ALL PACKAGES</button></a>
     </div>
 
+    <div id="contactUs">
+      <div class="container">
+        <div class="row">
+          <div class="col text-start d-flex flex-column justify-content-center">
+            <img src={logo_putihImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '90px', height: '70px', margin: '0', padding: '0' }} /> 
+            <div className="conten1">
+              <h5>Sebuah Cerita Sederhana Tentang</h5>
+              <h5>Pusat Layanan Pariwisata di </h5>
+              <h5>Indonesia</h5>
+            </div>
+            <div className="conten2">
+              Aplikasi travel dan tourism dengan beragam layanan 
+              dan informasi terpecaya, agar perjalanan anda 
+              nyaman.
+            </div>
+          </div>
+          <div class="col">
+            <h4>Contact US</h4>
+            <hr />
+            <p>Jangan ragu untuk menghubungi dan menghubungi kami !!</p> 
+              <div className="infomasi">
+              <div className="wa">
+              <FaWhatsapp style={{ marginLeft: '15px' }}  /> <p>+62 813 0989 5630</p>
+              </div>
 
+              <div className="email">
+              <FaEnvelope style={{ marginLeft: '15px' }} /> <p>temanwisata@gmail.com</p>
+              </div>
+
+              <div className="lokasi">
+              <FaMapMarkerAlt style={{ marginLeft: '15px' }} /> <p>Perkantoran Hijau Arkadia, Tower G, Jl. TB Simatupang No.88, RT.1/RW.1, Kebagusan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12520</p>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
+       <hr />
+       <h6>Copyright 2024 PT Berkelana Teman Wisata</h6>
+    </div>
     </>
+
+
+
   );
 }
 

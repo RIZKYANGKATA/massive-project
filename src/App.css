@@ -1,46 +1,3 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-
 ::-webkit-scrollbar {
   display: none;
 }
@@ -266,4 +223,70 @@ a{
  #package .card{
   background-image: url('./assets/images/coklat.png');
   background-repeat: repeat-x;
+ }
+
+ #contactUs{
+  background-color: #021526;
+  margin-top: 70px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  color: white;
+ }
+
+ #contactUs .conten1{
+  padding-top: 20px;
+  text-align: start;
+ }
+
+ #contactUs .conten2{
+  padding-top: 40px;
+  text-align: start;
+ }
+
+ #contactUs hr{
+  margin-top: 50px;
+  width: 1200px;
+  margin-left: 40px;
+ }
+
+ #contactUs h4{
+  padding-top: 70px;
+ }
+
+ #contactUs .col hr{
+  width: 60px;
+  margin-top: 10px;
+  margin-left: 5px;
+ }
+
+ #contactUs .col .informasi{
+  margin-top: 10px;
+ }
+
+ #contactUs .col .wa p{
+  margin-top: -22px;
+  margin-left: 50px;
+ }
+
+ #contactUs .col .email p{
+  margin-top: -22px;
+  margin-left: 50px;
+ }
+
+ #contactUs .col .lokasi p{
+  margin-top: -22px;
+  margin-left: 50px;
+ }
+
+ #contactUs .col .email{
+  margin-top: 20px;
+ }
+
+ #contactUs .col .lokasi{
+  margin-top: 20px;
+ }
+
+ #contactUs h6{
+  text-align: center;
+  padding-top: 10px;
  }
