@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Card from './components/card';
-import Home from './components/home';
+import Home from './feature/home';
 
 
 function App() {
