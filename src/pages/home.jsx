@@ -29,8 +29,9 @@ import '../App.css';
 import Card from '../components/card';
 
 
+
 function Home() {
-  const [count, setCount] = useState(0);
+
 
   return (
     <>
@@ -112,7 +113,7 @@ function Home() {
         <div class="col">
           <b>TENTANG KAMI</b>
           <p>"Website ini membantu para traveler, wisatawan, dan backpacker yang kesulitan mencari informasi tentang tempat wisata unik dengan budaya dan tradisi setempat. Kami menawarkan pengalaman berbeda dan berkesan, serta mengembangkan strategi pemasaran inovatif dan bertanggung jawab untuk menarik lebih banyak pengunjung dan memperpanjang masa tinggal mereka. Kami juga menerapkan praktik berkelanjutan untuk melestarikan sumber daya alam."</p>
-          <a href=""><button className="btn-aboutUs" type="submit">SELENGKAPNYA</button></a>
+          <button className="btn" type="submit">SELENGKAPNYA</button>
         </div>
       </div>
     </div>

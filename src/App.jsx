@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Card from './components/card';
-import Home from './feature/home';
+import Home from './pages/home';
+import About from './pages/about';
 
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
 
   return (
     <>
-      <Home/>
+      {/* <Home/> */}
+      <About/>
     </>
 
 
