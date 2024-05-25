@@ -67,7 +67,6 @@ function Home() {
         </div>
         <div className="end">
           <h6>Ayo, mulai petualangan Anda bersama kami sekarang!</h6>
-          <button className="btn" type="submit">SELENGKAPNYA</button>
         </div>
       </div>
       </div>
