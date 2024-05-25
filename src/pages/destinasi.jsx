@@ -15,6 +15,8 @@ import { faStar, faPaperclip, faThumbsUp } from '@fortawesome/free-solid-svg-ico
 
 import '../components/css/destinasi.css';
 import Card from '../components/card';
+import { Link } from 'react-router-dom';
+
 
 
 function Destinasi() {
@@ -29,7 +31,7 @@ function Destinasi() {
             <img src={logo_putihImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '100px', height: '80px' }} />
           </a>
         <ul className="inline-list">
-          <li><a href="#home">HOME</a></li>
+          <li><Link to="/">HOME</Link></li>
           <li><a href="#">ABOUT US</a></li>
           <li><a href="#">DESTINATION</a></li>
           <li><a href="#">CULTURE</a></li>

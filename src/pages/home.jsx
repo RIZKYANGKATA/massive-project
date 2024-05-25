@@ -23,6 +23,7 @@ import logo_putihImage from '../assets/images/logo_putih.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt} from 'react-icons/fa';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 import '../App.css';
@@ -112,7 +113,7 @@ function Home() {
         <div class="col">
           <b>TENTANG KAMI</b>
           <p>"Website ini membantu para traveler, wisatawan, dan backpacker yang kesulitan mencari informasi tentang tempat wisata unik dengan budaya dan tradisi setempat. Kami menawarkan pengalaman berbeda dan berkesan, serta mengembangkan strategi pemasaran inovatif dan bertanggung jawab untuk menarik lebih banyak pengunjung dan memperpanjang masa tinggal mereka. Kami juga menerapkan praktik berkelanjutan untuk melestarikan sumber daya alam."</p>
-          <button className="btn" type="submit">SELENGKAPNYA</button>
+          <button className="btn-aboutUs" type="submit"><Link to="/about">SELENGKAPNYA</Link></button>
         </div>
       </div>
     </div>
@@ -158,7 +159,7 @@ function Home() {
             />
           </div>
         </div>
-        <a href=""><button className="btn-destination" type="submit">MORE DESTINATION</button></a>
+        <button className="btn-destination" type="submit"><Link to="/destinasi">MORE DESTINATION</Link></button>
       </div>
     </div>
 
