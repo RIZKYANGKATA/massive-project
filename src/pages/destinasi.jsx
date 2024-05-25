@@ -3,15 +3,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo_putihImage from '../assets/images/logo_putih.png';
 import temanWisataImage from '../assets/images/temanWisata.png';
 import backgroundImage from '../assets/images/background.jpg';
+import bromoImage from '../assets/images/bromo.jpg'; 
+import pulauDerawanImage from '../assets/images/pulauDerawan.jpg';
+import labuanBajoImage from '../assets/images/labuanBajo.jpg';
+import kawahIjenImage from '../assets/images/kawahIjen.jpg';
+import rajaAmpatImage from '../assets/images/rajaAmpat.jpg';
 import candiImage from '../assets/images/candi.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt} from 'react-icons/fa';
 import { faStar, faPaperclip, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
-import '../components/css/about.css';
+import '../components/css/destinasi.css';
+import Card from '../components/card';
 
 
-function About() {
+function Destinasi() {
   const [count, setCount] = useState(0);
 
   return (
@@ -35,66 +41,83 @@ function About() {
             </form>
       </div>
       </div>
-
-      <div className="conten" style={{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', height: '100vh' }}>
+      <div className="conten-2">
         <div className="title">
-          <p><b>ABOUT US</b></p>
+          <p><b>DESTINASI</b></p>
         </div>
         <div className="subTitle">
-          <h6>“Web Site yang membantu para traveler, pariwisatawan, backpacker yang memiliki kesulitan dalam mencari informasi</h6>
-          <h6>rekomendasi tempat wisata yang menarik keunikan budaya dan tradisi setempat, memberikan pengalaman yang berbeda</h6>
-          <h6>dan berkesan bagi para pengunjung. Kami mengembangkan strategi pemasaran yang inovatif dan bertanggung jawab</h6>
-          <h6>untuk menarik lebih banyak pengunjung dan mendorong mereka untuk tinggal lebih lama. Serta mewujudkan lingkungan</h6>
-          <h6>dalam praktik berkelanjutan dan bisa melestarikan salah satu sumber daya alam.”</h6>
+        <h6>Temukan tempat-tempat terkenal yang menakjubkan di sini! Dengan beragam pilihan mulai dari alam yang memesona</h6>
+         <h6>hingga situs bersejarah yang menarik, ada sesuatu untuk semua orang. Jelajahi keindahan yang menakjubkan dan nikmati</h6>
+         <h6>pengalaman tak terlupakan</h6>
         </div>
       </div>
       </div>
 
-      <div className="isi">
+      <div className="destination-2">
       <div class="container text-center">
-        <div class="row align-items-start">
+        <div class="row align-items-center">
           <div class="col">
-          <div className="gambar">
-          <img src={candiImage} alt="Teman Wisata" className="d-inline-block align-text-top" />
-          </div>
+          <Card
+              imageUrl={backgroundImage} 
+              title="Pulau Weh, Aceh"
+              subTitle="Aceh"
+              description="Pulau Weh memiliki keistimewaan menjadi tempat di mana garis lintang 0 derajat atau dikenal Kilometer 0 Indonesia. "
+              harga="RP 560.000"
+              rating={4}
+            />
           </div>
           <div class="col">
-            <h3>Jelajahi Dunia Bersama Kami</h3>
-            <p>Kami membantu traveler menemukan destinasi wisata unik dan kebudayaan lokal. Dengan strategi pemasaran inovatif, kami mendorong pengunjung untuk menjelajahi lebih dalam dan berkontribusi pada praktik berkelanjutan</p>
+          <Card
+              imageUrl={bromoImage}
+              title="Bromo"
+              subTitle="Jawa Timur"
+              description="Gunung berapi aktif di Jawa Timur, Indonesia. Memiliki ketinggian 2.329 meter di atas permukaan laut"
+              harga="RP 560.000"
+              rating={5}
+            />
+          </div>
+          <div class="col">
+          <Card
+              imageUrl={pulauDerawanImage}
+              title="Pulau Derawan" 
+              subTitle="Kalimantan Timur"
+              description="kepulauan ini terdapat sejumlah objek wisata bahari menawan, salah satunya Taman Bawah Laut"
+              harga="RP 560.000"
+              rating={4}
+            />
+          </div>
+          <div class="col">
+          <Card
+              imageUrl={kawahIjenImage} 
+              title="Kawah Ijen" 
+              subTitle="Banyuwangi"
+              description="Pulau Weh memiliki keistimewaan menjadi tempat di mana garis lintang 0 derajat atau dikenal Kilometer 0 Indonesia. "
+              harga="RP 560.000"
+              rating={4}
+            />
+          </div>
+          <div class="col">
+          <Card
+              imageUrl={labuanBajoImage}
+              title="Labuan Bajo"
+              subTitle="Nusa Tenggara Timur"
+              description="Gunung berapi aktif di Jawa Timur, Indonesia. Memiliki ketinggian 2.329 meter di atas permukaan laut"
+              harga="RP 560.000"
+              rating={5}
+            />
+          </div>
+          <div class="col">
+          <Card
+              imageUrl={rajaAmpatImage}
+              title="Raja Ampat" 
+              subTitle="Papua Barat"
+              description="kepulauan ini terdapat sejumlah objek wisata bahari menawan, salah satunya Taman Bawah Laut"
+              harga="RP 560.000"
+              rating={4}
+            />
           </div>
         </div>
       </div>
-      </div>
-
-      <div className="end-2">
-      <div class="container text-center">
-          <div class="row align-items-start">
-            <div class="col">
-              <div class="card text-center" style={{ maxWidth: '250px', margin: 'auto' }}>
-                <div class="card-body">
-                  <FontAwesomeIcon icon={faStar} size="lg" />
-                  <p class="card-text">Complete Packages For All Your Wishes</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-            <div class="card text-center" style={{ maxWidth: '250px', margin: 'auto' }}>
-                <div class="card-body">
-                  <FontAwesomeIcon icon={faPaperclip} size="lg" />
-                  <p class="card-text">Expert Guides For Your Ultimate Journey</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-            <div class="card text-center" style={{ maxWidth: '250px', margin: 'auto' }}>
-                <div class="card-body">
-                  <FontAwesomeIcon icon={faThumbsUp} size="lg" />
-                  <p class="card-text">Unbeatable Prices, Unforgettable Experiences!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div id="contactUs">
@@ -142,4 +165,4 @@ function About() {
   );
 }
 
-export default About;
+export default Destinasi;

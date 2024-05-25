@@ -57,7 +57,7 @@ function Home() {
       </div>
       </div>
 
-      <div className="conten">
+      <div className="conten" style={{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', height: '100vh' }}>
         <div className="title">
           <p><b>PERJALANAN MENJELAJAHI DUNIA</b></p>
         </div>

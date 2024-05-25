@@ -21,13 +21,13 @@ a{
   color: white;
 }
 
-#home{
+/* #home{
   background-image: url('./assets/images/background.jpg');
   background-size: cover; 
   background-position: absolute; 
   background-repeat: no-repeat; 
   height: 100vh;
-}
+} */
 
 
 .inline-list {
