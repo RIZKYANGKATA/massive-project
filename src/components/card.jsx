@@ -1,8 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
-function Card({ imageUrl, title, subTitle, description, harga, rating }) {
+function Card({ id, imageUrl, title, subTitle, description, harga, rating }) {
   const renderStars = () => {
     const stars = [];
     for (let i = 0; i < rating; i++) {
@@ -24,7 +25,9 @@ function Card({ imageUrl, title, subTitle, description, harga, rating }) {
           <p className="card-text" style={{ textAlign: 'left', fontSize: '15px' }}>{description}</p>
           <div className="d-flex justify-content-between align-items-center">
             <p style={{ textAlign: 'left' }}>{harga}</p>
-            <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: '5px' }} />
+            <Link to={`/detailDestinasi/${id}`}>
+              <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: '5px', color: 'black'}} />
+            </Link>
           </div>
         </div>
       </div>

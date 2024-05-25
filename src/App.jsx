@@ -3,6 +3,7 @@ import Card from './components/card';
 import Home from './pages/home';
 import About from './pages/about';
 import Destinasi from './pages/destinasi';
+import DetailDestinasi from './pages/detailDestinasi';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home/>} /> {/* 👈 Renders at /app/ */}
         <Route path="/about" element={<About/>} /> {/* 👈 Renders at /app/ */}
         <Route path="/destinasi" element={<Destinasi/>} /> {/* 👈 Renders at /app/ */}
+        <Route path="/detailDestinasi/:id" element={<DetailDestinasi/>} /> {/* 👈 Renders at /app/ */}
       </Routes>
     </>
 

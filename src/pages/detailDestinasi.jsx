@@ -13,13 +13,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt} from 'react-icons/fa';
 import { faStar, faPaperclip, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
-import '../components/css/destinasi.css';
+import '../components/css/detailDestinasi.css'
 import Card from '../components/card';
 import { Link } from 'react-router-dom';
 
 
 
-function Destinasi() {
+function detailDestinasi() {
   const [count, setCount] = useState(0);
 
   return (
@@ -43,87 +43,22 @@ function Destinasi() {
             </form>
       </div>
       </div>
-      <div className="conten-2">
-        <div className="title">
-          <p><b>DESTINASI</b></p>
-        </div>
-        <div className="subTitle">
-        <h6>Temukan tempat-tempat terkenal yang menakjubkan di sini! Dengan beragam pilihan mulai dari alam yang memesona</h6>
-         <h6>hingga situs bersejarah yang menarik, ada sesuatu untuk semua orang. Jelajahi keindahan yang menakjubkan dan nikmati</h6>
-         <h6>pengalaman tak terlupakan</h6>
-        </div>
-      </div>
       </div>
 
-      <div className="destination-2">
-      <div class="container text-center">
+     <div className="detail-2">
+     <div class="container text-center">
         <div class="row align-items-center">
-          <div class="col">
-          <Card id="1"
-              imageUrl={backgroundImage} 
-              title="Pulau Weh, Aceh"
-              subTitle="Aceh"
-              description="Pulau Weh memiliki keistimewaan menjadi tempat di mana garis lintang 0 derajat atau dikenal Kilometer 0 Indonesia. "
-              harga="RP 560.000"
-              rating={4}
-            />
-            <Link to="/detailDestinasi"></Link>
-          </div>
-          <div class="col">
-          <Card
-              imageUrl={bromoImage}
-              title="Bromo"
-              subTitle="Jawa Timur"
-              description="Gunung berapi aktif di Jawa Timur, Indonesia. Memiliki ketinggian 2.329 meter di atas permukaan laut"
-              harga="RP 560.000"
-              rating={5}
-            />
-          </div>
-          <div class="col">
-          <Card
-              imageUrl={pulauDerawanImage}
-              title="Pulau Derawan" 
-              subTitle="Kalimantan Timur"
-              description="kepulauan ini terdapat sejumlah objek wisata bahari menawan, salah satunya Taman Bawah Laut"
-              harga="RP 560.000"
-              rating={4}
-            />
-          </div>
-          <div class="col">
-          <Card
-              imageUrl={kawahIjenImage} 
-              title="Kawah Ijen" 
-              subTitle="Banyuwangi"
-              description="Pulau Weh memiliki keistimewaan menjadi tempat di mana garis lintang 0 derajat atau dikenal Kilometer 0 Indonesia. "
-              harga="RP 560.000"
-              rating={4}
-            />
-          </div>
-          <div class="col">
-          <Card
-              imageUrl={labuanBajoImage}
-              title="Labuan Bajo"
-              subTitle="Nusa Tenggara Timur"
-              description="Gunung berapi aktif di Jawa Timur, Indonesia. Memiliki ketinggian 2.329 meter di atas permukaan laut"
-              harga="RP 560.000"
-              rating={5}
-            />
-          </div>
-          <div class="col">
-          <Card
-              imageUrl={rajaAmpatImage}
-              title="Raja Ampat" 
-              subTitle="Papua Barat"
-              description="kepulauan ini terdapat sejumlah objek wisata bahari menawan, salah satunya Taman Bawah Laut"
-              harga="RP 560.000"
-              rating={4}
-            />
-          </div>
+            <div class="col">
+            <p>HALO</p>
+            </div>
+            <div class="col">
+            One of three columns
+            </div>
         </div>
-      </div>
-      </div>
+     </div>
+     </div>
 
-      <div id="contactUs">
+      {/* <div id="contactUs">
       <div class="container">
         <div class="row">
           <div class="col text-start d-flex flex-column justify-content-center">
@@ -161,11 +96,11 @@ function Destinasi() {
       </div>
        <hr />
        <h6>Copyright 2024 PT Berkelana Teman Wisata</h6>
-    </div>
+    </div> */}
 
 
     </>
   );
 }
 
-export default Destinasi;
+export default detailDestinasi;
