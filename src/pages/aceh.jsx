@@ -4,6 +4,7 @@ import logo_putihImage from '../assets/images/logo_putih.png';
 import weh1Image from '../assets/images/weh1.jpg';
 import weh2Image from '../assets/images/weh2.jpg';
 import weh3Image from '../assets/images/weh3.jpg';
+import weh4Image from '../assets/images/weh4.jpg';
 import temanWisataImage from '../assets/images/temanWisata.png';
 import backgroundImage from '../assets/images/background.jpg';
 import bromoImage from '../assets/images/bromo.jpg'; 
@@ -109,13 +110,13 @@ function Aceh() {
           <img class="g1" src={weh1Image} alt="Teman Wisata" />
           </div>
           <div class="col">
-            <img class="g2" src={weh1Image} alt="Teman Wisata" />
+            <img class="g2" src={weh2Image} alt="Teman Wisata" />
               <div class="col">
-               <img class="g2" src={weh1Image} alt="Teman Wisata" />
+               <img class="g2" src={weh3Image} alt="Teman Wisata" />
               </div>
           </div>
           <div class="col">
-          <img class="g3" src={weh1Image} alt="Teman Wisata" />
+          <img class="g3" src={weh4Image} alt="Teman Wisata" />
           </div>
         </div>
       </div>

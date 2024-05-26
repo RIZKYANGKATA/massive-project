@@ -8,6 +8,10 @@ import temanWisataImage from '../assets/images/temanWisata.png';
 import backgroundImage from '../assets/images/background.jpg';
 import bromoImage from '../assets/images/bromo.jpg'; 
 import pulauDerawanImage from '../assets/images/pulauDerawan.jpg';
+import der2Image from '../assets/images/der2.png';
+import der3Image from '../assets/images/der3.jpg';
+import der4Image from '../assets/images/der4.jpeg';
+import der5Image from '../assets/images/der5.jpg';
 import labuanBajoImage from '../assets/images/labuanBajo.jpg';
 import kawahIjenImage from '../assets/images/kawahIjen.jpg';
 import rajaAmpatImage from '../assets/images/rajaAmpat.jpg';
@@ -59,13 +63,13 @@ function Derawan() {
               <div class="container text-center">
                 <div class="row align-items-center">
                   <div class="col">
-                  <img src={weh1Image} alt="Teman Wisata" className="d-inline-block align-text-top" />
+                  <img src={pulauDerawanImage} alt="Teman Wisata" className="d-inline-block align-text-top" />
                   </div>
                   <div class="col">
-                  <img src={weh2Image} alt="Teman Wisata" className="d-inline-block align-text-top" />
+                  <img src={der2Image} alt="Teman Wisata" className="d-inline-block align-text-top" />
                   </div>
                   <div class="col">
-                  <img src={weh3Image} alt="Teman Wisata" className="d-inline-block align-text-top" />
+                  <img src={der3Image} alt="Teman Wisata" className="d-inline-block align-text-top" />
                   </div>
                 </div>
               </div>
@@ -106,16 +110,16 @@ function Derawan() {
       <div class="container text-center">
         <div class="row align-items-center">
           <div class="col">
-          <img class="g1" src={weh1Image} alt="Teman Wisata" />
+          <img class="g1" src={der2Image} alt="Teman Wisata" />
           </div>
           <div class="col">
-            <img class="g2" src={weh1Image} alt="Teman Wisata" />
+            <img class="g2" src={der3Image} alt="Teman Wisata" />
               <div class="col">
-               <img class="g2" src={weh1Image} alt="Teman Wisata" />
+               <img class="g2" src={der4Image} alt="Teman Wisata" />
               </div>
           </div>
           <div class="col">
-          <img class="g3" src={weh1Image} alt="Teman Wisata" />
+          <img class="g3" src={der5Image} alt="Teman Wisata" />
           </div>
         </div>
       </div>

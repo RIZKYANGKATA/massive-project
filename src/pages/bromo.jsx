@@ -7,6 +7,10 @@ import weh3Image from '../assets/images/weh3.jpg';
 import temanWisataImage from '../assets/images/temanWisata.png';
 import backgroundImage from '../assets/images/background.jpg';
 import bromoImage from '../assets/images/bromo.jpg'; 
+import b2Image from '../assets/images/b2.jpg';
+import b3Image from '../assets/images/b3.jpg';
+import b4Image from '../assets/images/b4.jpeg';
+import b5Image from '../assets/images/b5.jpg';
 import pulauDerawanImage from '../assets/images/pulauDerawan.jpg';
 import labuanBajoImage from '../assets/images/labuanBajo.jpg';
 import kawahIjenImage from '../assets/images/kawahIjen.jpg';
@@ -53,19 +57,19 @@ function Bromo() {
         <div class="row align-items-center">
             <div class="col">
               <div className="gbr">
-              <img src={bromoImage} alt="Teman Wisata" className="d-inline-block align-text-top" />
+              <img src={b2Image} alt="Teman Wisata" className="d-inline-block align-text-top" />
               </div>
               <div className="gbr-sub">
               <div class="container text-center">
                 <div class="row align-items-center">
                   <div class="col">
-                  <img src={weh1Image} alt="Teman Wisata" className="d-inline-block align-text-top" />
+                  <img src={b2Image} alt="Teman Wisata" className="d-inline-block align-text-top" />
                   </div>
                   <div class="col">
-                  <img src={weh2Image} alt="Teman Wisata" className="d-inline-block align-text-top" />
+                  <img src={b3Image} alt="Teman Wisata" className="d-inline-block align-text-top" />
                   </div>
                   <div class="col">
-                  <img src={weh3Image} alt="Teman Wisata" className="d-inline-block align-text-top" />
+                  <img src={b4Image} alt="Teman Wisata" className="d-inline-block align-text-top" />
                   </div>
                 </div>
               </div>
@@ -106,16 +110,16 @@ function Bromo() {
       <div class="container text-center">
         <div class="row align-items-center">
           <div class="col">
-          <img class="g1" src={weh1Image} alt="Teman Wisata" />
+          <img class="g1" src={b2Image} alt="Teman Wisata" />
           </div>
           <div class="col">
-            <img class="g2" src={weh1Image} alt="Teman Wisata" />
+            <img class="g2" src={b3Image} alt="Teman Wisata" />
               <div class="col">
-               <img class="g2" src={weh1Image} alt="Teman Wisata" />
+               <img class="g2" src={b4Image} alt="Teman Wisata" />
               </div>
           </div>
           <div class="col">
-          <img class="g3" src={weh1Image} alt="Teman Wisata" />
+          <img class="g3" src={b5Image} alt="Teman Wisata" />
           </div>
         </div>
       </div>
