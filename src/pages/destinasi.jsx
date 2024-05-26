@@ -32,7 +32,7 @@ function Destinasi() {
           </a>
         <ul className="inline-list">
           <li><Link to="/">HOME</Link></li>
-          <li><a href="/">ABOUT US</a></li>
+          <li><Link to="/">ABOUT US</Link></li>
           <li><a href="/">DESTINATION</a></li>
           <li><a href="/">CULTURE</a></li>
           <li><a href="/">PACKAGE</a></li>

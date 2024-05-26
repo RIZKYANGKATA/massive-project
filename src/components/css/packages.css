@@ -1,0 +1,47 @@
+.paket .j-paket {
+    color: black;
+    text-align: center;
+    padding-top: 90px;
+    font-size: 40px;
+}
+
+.paket p{
+    color: black;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: -10px;
+}
+
+.paket .card{
+    align-items: center;
+    justify-content: center;
+    width: 1200px;
+    height: 300px;
+    margin-left: 40px;
+    margin-top: 70px;
+    border-radius: 15px;
+  }
+  
+.paket .card .card-body .row{
+    align-items: center;
+    justify-content: center;
+  }
+  
+.paket .card{
+    background-image: url('./assets/images/coklat.png');
+    background-repeat: repeat-x;
+   }
+
+   .custom-img {
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    margin-right: 630px;
+    border-radius: 15px;
+  }
+
+  .card-title , .card-text {
+   text-align: center;
+  }
+  
+  

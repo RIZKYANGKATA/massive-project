@@ -294,7 +294,7 @@ function Home() {
       </div>
       </div>
     </div>
-    <a href=""><button className="btn-destination" type="submit">VIEW ALL PACKAGES</button></a>
+    <button className="btn-destination" type="submit"><Link to="/packages">VIEW ALL PACKAGES</Link></button>
     </div>
 
     <div id="contactUs">
