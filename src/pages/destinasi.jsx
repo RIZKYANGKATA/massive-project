@@ -32,11 +32,11 @@ function Destinasi() {
           </a>
         <ul className="inline-list">
           <li><Link to="/">HOME</Link></li>
-          <li><a href="#">ABOUT US</a></li>
-          <li><a href="#">DESTINATION</a></li>
-          <li><a href="#">CULTURE</a></li>
-          <li><a href="#">PACKAGE</a></li>
-          <li><a href="#">CONTACT US</a></li>
+          <li><a href="/">ABOUT US</a></li>
+          <li><a href="/">DESTINATION</a></li>
+          <li><a href="/">CULTURE</a></li>
+          <li><a href="/">PACKAGE</a></li>
+          <li><a href="/">CONTACT US</a></li>
         </ul>
         <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="" aria-label="Search" />
@@ -67,10 +67,10 @@ function Destinasi() {
               harga="RP 560.000"
               rating={4}
             />
-            <Link to="/detailDestinasi"></Link>
+            <Link to="/aceh"></Link>
           </div>
           <div class="col">
-          <Card
+          <Card id="2"
               imageUrl={bromoImage}
               title="Bromo"
               subTitle="Jawa Timur"
@@ -78,9 +78,10 @@ function Destinasi() {
               harga="RP 560.000"
               rating={5}
             />
+            <Link to="/bromo"></Link>
           </div>
           <div class="col">
-          <Card
+          <Card id="3"
               imageUrl={pulauDerawanImage}
               title="Pulau Derawan" 
               subTitle="Kalimantan Timur"
@@ -88,6 +89,7 @@ function Destinasi() {
               harga="RP 560.000"
               rating={4}
             />
+             <Link to="/bromo"></Link>
           </div>
           <div class="col">
           <Card

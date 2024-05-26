@@ -12,6 +12,19 @@ function Card({ id, imageUrl, title, subTitle, description, harga, rating }) {
     return stars;
   };
 
+  const getRoute = (id) => {
+    switch (id) {
+      case '1':
+        return `/aceh/${id}`;
+      case '2':
+        return `/bromo/${id}`;
+      case '3':
+        return `/derawan/${id}`;
+      default:
+        return `/destination/${id}`;
+    }
+  };
+
   return (
     <div className="card custom-card mb-3" style={{ width: '20rem', borderRadius: '15px' }}>
       <img src={imageUrl} className="card-img-top" alt={title} style={{ borderTopRightRadius: '15px', borderTopLeftRadius: '15px' }} />
@@ -25,7 +38,7 @@ function Card({ id, imageUrl, title, subTitle, description, harga, rating }) {
           <p className="card-text" style={{ textAlign: 'left', fontSize: '15px' }}>{description}</p>
           <div className="d-flex justify-content-between align-items-center">
             <p style={{ textAlign: 'left' }}>{harga}</p>
-            <Link to={`/detailDestinasi/${id}`}>
+            <Link to={getRoute(id)}>
               <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: '5px', color: 'black'}} />
             </Link>
           </div>

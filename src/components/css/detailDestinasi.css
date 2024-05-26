@@ -1,4 +1,113 @@
 .detail-2 {
-    color: red;
-    padding-top: 200px;
+    color: black;
+    padding-top: 220px;
+    padding-bottom: 100px;
+}
+
+.dedes{
+    padding-top: 250px;
+    margin-top: -270px;
+    margin-left: 50px;
+    text-align: start;
+}
+
+.info {
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.info li {
+    display: flex;
+    align-items: center; 
+    margin-left: -30px;
+    margin-bottom: 10px;
+}
+
+.info li svg {
+    margin-right: 10px;
+}
+
+.info li p {
+    margin-bottom: 0; 
+}
+
+
+.gbr img{
+    margin-top: -180px;
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.gbr-sub img{
+    height: 88px;
+    width: 136px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.btn-book-now{
+  border-radius: 100px;
+  background-color: #011526;
+  color: white;
+  width: 180px;
+  height: 40px;
+  align-items: end;
+  justify-content: end;
+  border: #011526;
+  margin-left: 300px;
+  margin-top: 10px;
+}
+
+.galeri{
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.galeri h4{
+    margin-left: 100px;
+}
+
+.galeri .g1{
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.galeri .g2{
+    height: 140px;
+    width: 260px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.galeri .g3{
+    height: 300px;
+    width: 220px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.say{
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.say h4{
+    padding-left: 150px;
+    padding-bottom: 20px;
+}
+
+.btn-add-review{
+    border-radius: 100px;
+    background-color: #011526;
+    color: white;
+    width: 180px;
+    height: 40px;
+    border: #011526;
+    margin-left: 550px;
+    margin-top: 40px;
 }

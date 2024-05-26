@@ -26,11 +26,11 @@ function About() {
           </a>
         <ul className="inline-list">
           <li><Link to="/">HOME</Link></li>
-          <li><a href="#">ABOUT US</a></li>
-          <li><a href="#">DESTINATION</a></li>
-          <li><a href="#">CULTURE</a></li>
-          <li><a href="#">PACKAGE</a></li>
-          <li><a href="#">CONTACT US</a></li>
+          <li><a href="/">ABOUT US</a></li>
+          <li><a href="/">DESTINATION</a></li>
+          <li><a href="/">CULTURE</a></li>
+          <li><a href="/">PACKAGE</a></li>
+          <li><a href="/">CONTACT US</a></li>
         </ul>
         <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="" aria-label="Search" />

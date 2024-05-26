@@ -31,6 +31,7 @@ import Card from '../components/card';
 
 
 
+
 function Home() {
 
 
@@ -129,7 +130,7 @@ function Home() {
       <div class="container text-center">
         <div class="row align-items-center">
           <div class="col">
-          <Card
+          <Card id="1"
               imageUrl={backgroundImage} 
               title="Pulau Weh, Aceh"
               subTitle="Aceh"
@@ -137,9 +138,10 @@ function Home() {
               harga="RP 560.000"
               rating={4}
             />
+            <Link to="/aceh"></Link>
           </div>
           <div class="col">
-          <Card
+          <Card id="2"
               imageUrl={bromoImage}
               title="Bromo"
               subTitle="Jawa Timur"
@@ -147,9 +149,10 @@ function Home() {
               harga="RP 560.000"
               rating={5}
             />
+            <Link to="/bromo"></Link>
           </div>
           <div class="col">
-          <Card
+          <Card id="3"
               imageUrl={pulauDerawanImage}
               title="Pulau Derawan" 
               subTitle="Kalimantan Timur"
@@ -157,6 +160,7 @@ function Home() {
               harga="RP 560.000"
               rating={4}
             />
+            <Link to="/derawan"></Link>
           </div>
         </div>
         <button className="btn-destination" type="submit"><Link to="/destinasi">MORE DESTINATION</Link></button>
