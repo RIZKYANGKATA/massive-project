@@ -179,7 +179,7 @@ function Home() {
         <div className="col-md-3 position-relative">
           <img src={baliImage} className="img-fluid image" alt="Teman Wisata 1" />
           <div className="text-overlay-1 position-absolute top-0 start-0">
-          <h3>Bali</h3>
+          <Link to="/cultureBali"><h3>Bali</h3></Link>
           </div>
         </div>
         <div className="col-md-3 position-relative">

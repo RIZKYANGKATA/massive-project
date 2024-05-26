@@ -7,6 +7,8 @@ import Aceh from './pages/aceh';
 import Bromo from './pages/bromo';
 import Derawan from './pages/derawan';
 import Packages from './pages/packages';
+import CultureBali from './pages/cultureBali';
+import Panglipuran from './pages/panglipuran';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -23,6 +25,8 @@ function App() {
         <Route path="/bromo/:id" element={<Bromo/>} /> 
         <Route path="/derawan/:id" element={<Derawan/>} />
         <Route path="/packages" element={<Packages/>} />
+        <Route path="/cultureBali" element={<CultureBali/>} />
+        <Route path="/panglipuran/:id" element={<Panglipuran/>} />
       </Routes>
     </>
 
