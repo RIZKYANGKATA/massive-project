@@ -9,13 +9,35 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt} from 'react-icons/fa';
 import { faStar, faPaperclip, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 import '../components/css/detailCulture.css';
 
 
 function Panglipuran() {
-  const [count, setCount] = useState(0);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleScroll = (event) => {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute("href").substring(1);
+
+    if (location.pathname === '/') {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  };
 
   return (
     <>
@@ -26,12 +48,12 @@ function Panglipuran() {
             <img src={logo_putihImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '100px', height: '80px' }} />
           </a>
         <ul className="inline-list">
-          <li><Link to="/">HOME</Link></li>
-          <li><a href="/">ABOUT US</a></li>
-          <li><a href="/">DESTINATION</a></li>
-          <li><a href="/">CULTURE</a></li>
-          <li><a href="/">PACKAGE</a></li>
-          <li><a href="/">CONTACT US</a></li>
+              <li><a href="#home" onClick={handleScroll}>HOME</a></li>
+              <li><a href="#aboutUs" onClick={handleScroll}>ABOUT US</a></li>
+              <li><a href="#destination" onClick={handleScroll}>DESTINATION</a></li>
+              <li><a href="#culture" onClick={handleScroll}>CULTURE</a></li>
+              <li><a href="#package" onClick={handleScroll}>PACKAGE</a></li>
+              <li><a href="#contactUs" onClick={handleScroll}>CONTACT US</a></li>
         </ul>
         <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="" aria-label="Search" />
