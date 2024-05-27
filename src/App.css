@@ -217,6 +217,7 @@ a{
   height: 300px;
   margin-left: 40px;
   margin-top: 70px;
+  border-radius: 15px;
 
 }
 
@@ -224,11 +225,6 @@ a{
   align-items: center;
   justify-content: center;
 }
-
- #package .card{
-  background-image: url('./assets/images/coklat.png');
-  background-repeat: repeat-x;
- }
 
  #contactUs{
   background-color: #021526;

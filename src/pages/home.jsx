@@ -16,6 +16,7 @@ import sulselImage from '../assets/images/sulsel.jpg';
 import niasImage from '../assets/images/nias.jpg';
 import papuaImage from '../assets/images/papua.jpg';
 import banyuwangiImage from '../assets/images/banyuwangi.jpg';
+import b2Image from '../assets/images/b2.jpg';
 import tobaImage from '../assets/images/toba.png';
 import palembangImage from '../assets/images/palembang.png';
 import semarangImage from '../assets/images/semarang.png';
@@ -265,35 +266,47 @@ function Home() {
     <p>solo, kami memiliki beragam pilihan untuk memenuhi keinginan liburan Anda. Rasakan pengalaman yang tak terlupakan</p>
     <p>dan buat kenangan indah bersama kami.</p>
 
-    <div class="card">
-      <div class="card-body">
-      <div className="row">
-        <div className="col-md-3">
-          <img src={tobaImage} className="img-fluid image" style={{ height: '295px', width: '1200px'}} alt="Teman Wisata 1" />
+        <div className="card mb-3">
+          <div className="row g-0">
+            <div className="col-md-4">
+              <img src={b2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
+            </div>
+            <div className="col-md-8">
+              <div className="card-body">
+                <h5 className="card-title">Paket Wisata 1</h5>
+                <p className="card-text">Deskripsi singkat tentang paket wisata 1.</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="card-body">
-      <div className="row">
-        <div className="col-md-3">
-          <img src={semarangImage} className="img-fluid image" style={{ height: '295px', width: '1200px'}} alt="Teman Wisata 1" />
-        </div>
-      </div>
-      </div>
-    </div>
+        <div className="card mb-3">
+          <div className="row g-0">
+            <div className="col-md-4">
+              <img src={b2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
+            </div>
+            <div className="col-md-8">
+              <div className="card-body">
+                <h5 className="card-title">Paket Wisata 1</h5>
+                <p className="card-text">Deskripsi singkat tentang paket wisata 1.</p>
+              </div>
+            </div>
+          </div>
 
-    <div class="card">
-      <div class="card-body">
-      <div className="row">
-        <div className="col-md-3">
-          <img src={palembangImage} className="img-fluid image" style={{ height: '295px', width: '1200px'}} alt="Teman Wisata 1" />
+        </div><div className="card mb-3">
+          <div className="row g-0">
+            <div className="col-md-4">
+              <img src={b2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
+            </div>
+            <div className="col-md-8">
+              <div className="card-body">
+                <h5 className="card-title">Paket Wisata 1</h5>
+                <p className="card-text">Deskripsi singkat tentang paket wisata 1.</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      </div>
-    </div>
+        
     <button className="btn-destination" type="submit"><Link to="/packages">VIEW ALL PACKAGES</Link></button>
     </div>
 

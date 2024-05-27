@@ -26,11 +26,6 @@
     align-items: center;
     justify-content: center;
   }
-  
-.paket .card{
-    background-image: url('./assets/images/coklat.png');
-    background-repeat: repeat-x;
-   }
 
    .custom-img {
     height: 300px;
