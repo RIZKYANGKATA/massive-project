@@ -339,3 +339,29 @@ a{
   border: #011526;
   margin-top: 0px;
 }
+
+.btn-register{
+  border-radius: 100px;
+  background-color: #011526;
+  color: white;
+  width: 90px;
+  height: 40px;
+  border: #011526;
+  margin-top: 0px;
+}
+
+.f-l-regi .card{
+  height: 500px;
+  width: 350px;
+  margin-left: 435px;
+  margin-top: -180px;
+  border-radius: 20px;
+}
+
+.f-l-regi{
+  text-align: start;
+}
+
+.f-l-regi .mb-3{
+  color: gray;
+}
