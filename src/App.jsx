@@ -11,6 +11,7 @@ import CultureBali from './pages/cultureBali';
 import Panglipuran from './pages/panglipuran';
 import Login from './components/login';
 import Register from './components/register';
+import ForgotPassword from './components/forgotPassword';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/panglipuran/:id" element={<Panglipuran/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
+        <Route path="/forgotPassword" element={<ForgotPassword/>} />
       </Routes>
     </>
 

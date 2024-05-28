@@ -48,7 +48,7 @@ function Login() {
                     required 
                   />
                 </div>
-                <Link to="/forgot-password" className="d-block mb-2" style={{ textAlign: 'end', color: 'gray', textDecoration: 'none' }}>Forgot your password?</Link>
+                <Link to="/forgotPassword" className="d-block mb-2" style={{ textAlign: 'end', color: 'gray', textDecoration: 'none' }}>Forgot your password?</Link>
                 <button type="submit" className="btn btn w-100 mb-1 ">Sign In</button>
                 <h6 style={{textAlign: 'center'}}>or</h6>
                 <button type="button" className="btn btn w-100" onClick={handleGoogleSignUp}>Sign Ip with Google</button>
