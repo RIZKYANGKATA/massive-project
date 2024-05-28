@@ -9,6 +9,7 @@ import Derawan from './pages/derawan';
 import Packages from './pages/packages';
 import CultureBali from './pages/cultureBali';
 import Panglipuran from './pages/panglipuran';
+import Login from './components/login';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/packages" element={<Packages/>} />
         <Route path="/cultureBali" element={<CultureBali/>} />
         <Route path="/panglipuran/:id" element={<Panglipuran/>} />
+        <Route path="/login" element={<Login/>} />
       </Routes>
     </>
 

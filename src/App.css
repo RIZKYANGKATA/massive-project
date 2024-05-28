@@ -307,3 +307,35 @@ a{
   align-items: center;
   justify-content: space-between;
 }
+
+.f-l .card{
+  height: 450px;
+  width: 350px;
+  margin-left: 435px;
+  margin-top: -150px;
+  border-radius: 20px;
+}
+
+.f-l{
+  text-align: start;
+}
+.f-l .mb-3{
+  color: gray;
+}
+
+.custom-input {
+  width: 370px;
+  border: 1px black solid;
+  box-sizing: border-box; 
+  border-radius: 10px;
+}
+
+.btn-login{
+  border-radius: 100px;
+  background-color: #011526;
+  color: white;
+  width: 80px;
+  height: 40px;
+  border: #011526;
+  margin-top: 0px;
+}

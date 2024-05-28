@@ -52,7 +52,7 @@ function Home() {
           <li><a href="#package">PACKAGE</a></li>
           <li><a href="#contactUs">CONTACT US</a></li>
           <li><button className="btn" type="submit">SIGN UP</button></li>
-          <li><button className="btn" type="submit">LOGIN</button></li>
+          <li><button className="btn-login" type="submit"><Link to="/login">LOGIN</Link></button></li>
         </ul>
         <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="" aria-label="Search" />
