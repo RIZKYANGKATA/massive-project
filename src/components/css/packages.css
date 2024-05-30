@@ -12,7 +12,7 @@
     margin-top: -10px;
 }
 
-.paket .card{
+.paket-2 .card{
     align-items: center;
     justify-content: center;
     width: 1200px;
@@ -21,22 +21,95 @@
     margin-top: 70px;
     border-radius: 15px;
   }
-  
-.paket .card .card-body .row{
-    align-items: center;
-    justify-content: center;
-  }
 
-   .custom-img {
+.custom-img {
     height: 300px;
     width: 400px;
-    object-fit: cover;
-    margin-right: 630px;
-    border-radius: 15px;
-  }
+    margin-left: -85px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.paket-2 p{
+  text-align: start;
+  padding-left: 90px;
+  margin: 0;
+}
 
-  .card-title , .card-text {
-   text-align: center;
-  }
-  
-  
+.paket-2 .p-k{
+  padding-top: 30px;
+}
+
+.paket-2 .card-text{
+  margin: 0;
+  margin-left: -70px;
+}
+
+.paket-2 .card-title{
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: -70px;
+}
+
+.inpa{
+  width: 275px;
+  margin-left: 10px;
+  margin-top: 30px;
+  border-radius: 30px;
+  list-style-type: none;
+  display: flex;
+  text-align: start;
+  padding-left: 45px;
+  background-color: #EEE8DC;
+}
+
+.inpa li{
+  display: inline;
+  justify-content: space-around;
+  margin: 10px;
+  margin-left: -2px;
+}
+
+
+/* .additional-info {
+  margin-top: -260px; 
+  padding-left: 400px; 
+  text-align: center;
+}
+
+.additional-info-2 {
+  margin-top: 25px; 
+  padding-left: 445px; 
+  text-align: center;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.additional-info-3 {
+  margin-top: 0px; 
+  padding-left: 460px; 
+  text-align: center;
+  font-size: 25px;
+} */
+
+.nekon {
+  padding-top: 40px;
+}
+
+.nekon p{
+  text-align: start;
+  font-weight: 900;
+  font-size: 40px;
+  margin-left: 20px;
+}
+
+.btn-bopa{
+  border-radius: 100px;
+  background-color: #011526;
+  color: white;
+  width: 180px;
+  height: 40px;
+  align-items: end;
+  justify-content: end;
+  border: #011526;
+  margin-top: 20px;
+}

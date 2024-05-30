@@ -29,7 +29,6 @@ a{
   height: 100vh;
 } */
 
-
 .inline-list {
   position: sticky;
   list-style-type: none;
@@ -41,13 +40,13 @@ a{
   
 }
 
-.inline-list li {
+.inline-list li a{
   position: sticky;
   display: inline;
-  margin-right: 20px;
+  text-align: center;
   font-size: 18px;
   color: white;
-}
+} 
 
 .conten{
   text-align: center;
@@ -226,8 +225,69 @@ a{
   justify-content: center;
 }
 
+#package .p-k{
+  padding-top: 30px;
+  margin-left: 80px;
+}
+
+#package .card-text{
+  text-align: start;
+  margin: 0;
+  margin-left: -70px;
+}
+
+#package .card-title{
+  text-align: start;
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+#package .inpa{
+  width: 275px;
+  margin-left: 0px;
+  margin-top: 30px;
+  border-radius: 30px;
+  list-style-type: none;
+  display: flex;
+  text-align: start;
+  padding-left: 45px;
+  background-color: #EEE8DC;
+}
+
+#package .inpa li{
+  display: inline;
+  justify-content: space-around;
+  margin: 10px;
+  margin-left: -2px;
+}
+
+.nekon {
+  padding-top: 40px;
+}
+
+.nekon p{
+  text-align: start;
+  font-weight: 900;
+  font-size: 40px;
+  margin-left: 20px;
+}
+
+.btn-bopa{
+  border-radius: 100px;
+  background-color: #011526;
+  color: white;
+  width: 180px;
+  height: 40px;
+  align-items: end;
+  justify-content: end;
+  border: #011526;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
  #contactUs{
-  background-color: #021526;
+  background-color: #152D47;
   margin-top: 70px;
   padding-top: 20px;
   padding-bottom: 40px;
@@ -293,8 +353,9 @@ a{
  }
 
  .navbar-brand{
-  margin-right: 30px;
-  margin-top: -20px;
+  margin-left: -1100px;
+  margin-top: -5px;
+  position: fixed;
  }
 
  .d-flex{
@@ -338,6 +399,7 @@ a{
   height: 40px;
   border: #011526;
   margin-top: 0px;
+  margin-right: -350px;
 }
 
 .btn-register{
@@ -348,6 +410,7 @@ a{
   height: 40px;
   border: #011526;
   margin-top: 0px;
+  margin-right: -200px;
 }
 
 .f-l-regi .card{

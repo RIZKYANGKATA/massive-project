@@ -73,7 +73,7 @@ function Register() {
                 </div>
                 <button type="submit" className="btn btn w-100 mb-1 ">Sign In</button>
                     <h6 style={{textAlign: 'center'}}>or</h6>
-                    <button type="button" className="btn btn w-100" onClick={handleGoogleSignUp}>Sign Ip with Google</button>
+                    <button type="button" className="btn btn w-100" onClick={handleGoogleSignUp}>Sign In with Google</button>
                 <p style={{textAlign: 'center', marginTop: '15px'}}>Already have an account? <b><Link to="/login" style={{color: 'black'}}>Log in</Link></b></p>
               </form>
             </div>

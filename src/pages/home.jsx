@@ -22,7 +22,7 @@ import palembangImage from '../assets/images/palembang.png';
 import semarangImage from '../assets/images/semarang.png';
 import logo_putihImage from '../assets/images/logo_putih.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt} from 'react-icons/fa';
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaClock, FaUsers} from 'react-icons/fa'
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
@@ -42,7 +42,7 @@ function Home() {
       <div className="header fixed-top">
       <div className="navbar">
       <a className="navbar-brand" href="#">
-            <img src={logo_putihImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '100px', height: '80px' }} />
+            <img src={logo_putihImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '100px', height: '80px'}} />
           </a>
         <ul className="inline-list">
           <li><a href="#home">HOME</a></li>
@@ -54,9 +54,9 @@ function Home() {
           <li><button className="btn-register" type="submit"><Link to="/register">SIGN UP</Link></button></li>
           <li><button className="btn-login" type="submit"><Link to="/login">LOGIN</Link></button></li>
         </ul>
-        <form className="d-flex" role="search">
+        {/* <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="" aria-label="Search" />
-            </form>
+            </form> */}
       </div>
       </div>
 
@@ -110,7 +110,7 @@ function Home() {
     <div class="container">
       <div class="row align-items-center">
         <div class="col">
-        <img src={temanWisataImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '80%', height: '80%', backgroundColor: '#EEE8DC', marginTop: '50px', borderRadius: '50px' }} />
+        <img src={temanWisataImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '80%', height: '80%', marginTop: '50px', borderRadius: '50px' }} />
         </div>
         <div class="col">
           <b>TENTANG KAMI</b>
@@ -266,48 +266,108 @@ function Home() {
     <p>solo, kami memiliki beragam pilihan untuk memenuhi keinginan liburan Anda. Rasakan pengalaman yang tak terlupakan</p>
     <p>dan buat kenangan indah bersama kami.</p>
 
-        <div className="card mb-3">
-          <div className="row g-0">
-            <div className="col-md-4">
+    <div className="card mb-3">
+        <div class="container text-center">
+          <div class="row align-items-center">
+            <div class="col">
+            <div className="col">
               <img src={b2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
             </div>
-            <div className="col-md-8">
-              <div className="card-body">
-                <h5 className="card-title">Paket Wisata 1</h5>
-                <p className="card-text">Deskripsi singkat tentang paket wisata 1.</p>
+            </div>
+            <div class="col">
+            <div className="card-body">
+                <p className="card-title">Paket Tour</p>
+                <p className="card-title">Labuan Bajo 1 Hari</p>
+              <div className="p-k">
+                <p className="card-text">Paket One Day Trip Labuan Bajo</p>
+                <p className="card-text">Mengunjungi Air Terjun, Rumah</p>
+                <p className="card-text">Adat, dan Alam Budaya Flores.</p>
               </div>
+                <ul className="inpa">
+                  <li><FaClock /> 1 hari</li>
+                  <li><FaUsers /> 5 pax</li>
+                  <li><FaMapMarkerAlt /> NTT</li>
+              </ul>
+            </div>
+            </div>
+            <div class="col nekon" style={{backgroundColor: '#EEE8DC', marginRight: '-30px', marginBottom: '0px', height: '300px', borderBottomRightRadius: '15px', borderTopRightRadius: '15px'}}>
+              <h5>Private Tour</h5>
+              <p>1,1 juta</p>
+              <p style={{fontSize: '25px', fontWeight: 'normal', marginLeft: '15px'}}>per orang</p>
+              <button className="btn-bopa" type="submit" style={{marginTop: '60px', marginRight: '0px'}}><Link to="">BOOK NOW</Link></button>
             </div>
           </div>
         </div>
+        </div>
 
         <div className="card mb-3">
-          <div className="row g-0">
-            <div className="col-md-4">
+        <div class="container text-center">
+          <div class="row align-items-center">
+            <div class="col">
+            <div className="col">
               <img src={b2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
             </div>
-            <div className="col-md-8">
-              <div className="card-body">
-                <h5 className="card-title">Paket Wisata 1</h5>
-                <p className="card-text">Deskripsi singkat tentang paket wisata 1.</p>
-              </div>
             </div>
-          </div>
-
-        </div><div className="card mb-3">
-          <div className="row g-0">
-            <div className="col-md-4">
-              <img src={b2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
-            </div>
-            <div className="col-md-8">
-              <div className="card-body">
-                <h5 className="card-title">Paket Wisata 1</h5>
-                <p className="card-text">Deskripsi singkat tentang paket wisata 1.</p>
+            <div class="col">
+            <div className="card-body">
+                <p className="card-title">Paket Tour</p>
+                <p className="card-title">Labuan Bajo 1 Hari</p>
+              <div className="p-k">
+                <p className="card-text">Paket One Day Trip Labuan Bajo</p>
+                <p className="card-text">Mengunjungi Air Terjun, Rumah</p>
+                <p className="card-text">Adat, dan Alam Budaya Flores.</p>
               </div>
+                <ul className="inpa">
+                  <li><FaClock /> 1 hari</li>
+                  <li><FaUsers /> 5 pax</li>
+                  <li><FaMapMarkerAlt /> NTT</li>
+              </ul>
+            </div>
+            </div>
+            <div class="col nekon" style={{backgroundColor: '#EEE8DC', marginRight: '-30px', marginBottom: '0px', height: '300px', borderBottomRightRadius: '15px', borderTopRightRadius: '15px'}}>
+              <h5>Private Tour</h5>
+              <p>1,1 juta</p>
+              <p style={{fontSize: '25px', fontWeight: 'normal', marginLeft: '15px'}}>per orang</p>
+              <button className="btn-bopa" type="submit" style={{marginTop: '60px', marginRight: '0px'}}><Link to="">BOOK NOW</Link></button>
             </div>
           </div>
         </div>
-        
-    <button className="btn-destination" type="submit"><Link to="/packages">VIEW ALL PACKAGES</Link></button>
+        </div>
+
+        <div className="card mb-3">
+        <div class="container text-center">
+          <div class="row align-items-center">
+            <div class="col">
+            <div className="col">
+              <img src={b2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
+            </div>
+            </div>
+            <div class="col">
+            <div className="card-body">
+                <p className="card-title">Paket Tour</p>
+                <p className="card-title">Labuan Bajo 1 Hari</p>
+              <div className="p-k">
+                <p className="card-text">Paket One Day Trip Labuan Bajo</p>
+                <p className="card-text">Mengunjungi Air Terjun, Rumah</p>
+                <p className="card-text">Adat, dan Alam Budaya Flores.</p>
+              </div>
+                <ul className="inpa">
+                  <li><FaClock /> 1 hari</li>
+                  <li><FaUsers /> 5 pax</li>
+                  <li><FaMapMarkerAlt /> NTT</li>
+              </ul>
+            </div>
+            </div>
+            <div class="col nekon" style={{backgroundColor: '#EEE8DC', marginRight: '-30px', marginBottom: '0px', height: '300px', borderBottomRightRadius: '15px', borderTopRightRadius: '15px'}}>
+              <h5>Private Tour</h5>
+              <p>1,1 juta</p>
+              <p style={{fontSize: '25px', fontWeight: 'normal', marginLeft: '15px'}}>per orang</p>
+              <button className="btn-bopa" type="submit" style={{marginTop: '60px', marginRight: '0px'}}><Link to="">BOOK NOW</Link></button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <button className="btn-destination" type="submit"><Link to="/packages">VIEW ALL PACKAGES</Link></button>
     </div>
 
     <div id="contactUs">
