@@ -12,6 +12,7 @@ import Panglipuran from './pages/panglipuran';
 import Login from './components/login';
 import Register from './components/register';
 import ForgotPassword from './components/forgotPassword';
+import Review from './pages/review';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
         <Route path="/forgotPassword" element={<ForgotPassword/>} />
+        <Route path="/review" element={<Review/>} />
       </Routes>
     </>
 

@@ -199,7 +199,7 @@ function Bromo() {
             </div>
           </div>
         </div>
-        <button className="btn-add-review" type="submit">ADD REVIEW</button>
+        <button className="btn-add-review" type="submit"><Link to="/review?Id=2">ADD REVIEW</Link></button>
      </div>
 
       <div id="contactUs">
