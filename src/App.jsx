@@ -13,6 +13,9 @@ import Login from './components/login';
 import Register from './components/register';
 import ForgotPassword from './components/forgotPassword';
 import Review from './pages/review';
+import Payment from './pages/payment';
+import Payment2 from './pages/payment2';
+import Payment3 from './pages/payment3';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -35,6 +38,9 @@ function App() {
         <Route path="/register" element={<Register/>} />
         <Route path="/forgotPassword" element={<ForgotPassword/>} />
         <Route path="/review" element={<Review/>} />
+        <Route path="/payment" element={<Payment/>} />
+        <Route path="/payment2" element={<Payment2/>} />
+        <Route path="/payment3" element={<Payment3/>} />
       </Routes>
     </>
 

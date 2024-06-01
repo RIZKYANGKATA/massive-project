@@ -120,7 +120,7 @@ function Bromo() {
                 </li>
               </ul>
               </div>
-              <button className="btn-book-now" type="submit">BOOK NOW</button>
+              <button className="btn-book-now" type="submit"><Link to="/payment?Id=2">BOOK NOW</Link></button>
             </div>
             </div>
         </div>

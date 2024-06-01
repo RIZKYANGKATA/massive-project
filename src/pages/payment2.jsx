@@ -1,18 +1,21 @@
-import React, { useRef } from 'react'; 
-import { useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo_putihImage from '../assets/images/logo_putih.png';
 import backgroundImage from '../assets/images/background.jpg';
 import bromoImage from '../assets/images/bromo.jpg'; 
 import pulauDerawanImage from '../assets/images/pulauDerawan.jpg';
+import labuanBajoImage from '../assets/images/labuanBajo.jpg';
+import divingLabaImage from '../assets/images/divingLaba.jpg'; 
+import b2Image from '../assets/images/b2.jpg';
 import candiImage from '../assets/images/candi.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaCamera, FaVideo } from 'react-icons/fa';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { Link, useNavigate } from 'react-router-dom';
-import '../components/css/review.css';
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { faStar, faPaperclip, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import '../components/css/payment.css';
+import levelNumber from '../components/levelNumber';
 
-function Review() {
+function Payment2() {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -43,18 +46,38 @@ function Review() {
     '1': backgroundImage,
     '2': bromoImage,
     '3': pulauDerawanImage,
+    '4': labuanBajoImage,
+    '5': divingLabaImage,
+    '6': b2Image,
   };
 
-  const photoInputRef = useRef(null);
-  const videoInputRef = useRef(null);
+  const titleMap = {
+    '1': 'Pulau Weh Aceh',
+    '2': 'Bromo',
+    '3': 'Pulau Derawan',
+    '4': 'Labuan Bajo',
+    '5' : 'Diving Labuan Bajo',
+    '6' : 'Bromo Sunrise',
+  }
 
-  const handleAddPhoto = () => {
-    photoInputRef.current.click(); 
-  };
+  const subTitle = {
+    '1': 'Aceh',
+    '2': 'Jawa Timur',
+    '3': 'Kalimantan Timur',
+    '4': 'Nusa Tenggara Timur',
+    '5': 'Nusa Tenggara Timur',
+    '6': 'Jawa Timur',
 
-  const handleAddVideo = () => {
-    videoInputRef.current.click(); 
-  };
+  }
+
+  const Harga = {
+    '1': 'RP 960.000',
+    '2': 'RP 560.000',
+    '3': 'RP 1000.000',
+    '4': 'RP 1100.000',
+    '5': 'RP 1000.000',
+    '6': 'RP 600.000',
+  }
 
   return (
     <>
@@ -78,43 +101,39 @@ function Review() {
           </div>
         </div>
       </div>
-      
-      <h1>ULASAN</h1>
-      <div className="card review">
-        <div className="card-body">
-          <img src={imageMap[destinationId]} alt="Destination" style={{height: '200px', width: '200px', borderRadius: '15px', marginTop: '30px', marginLeft: '30px'}}/>
-          <div className="nilai">
-            <p>Beri Penilaian</p>
-            <div className="bintang">
-              <FontAwesomeIcon icon={faStar} size="5px" />
-              <FontAwesomeIcon icon={faStar} size="5px" />
-              <FontAwesomeIcon icon={faStar} size="5px" />
-            </div>
-          </div>
-          <div className="container-2 text-center">
-            <div className="row align-items-center">
-              <div className="col">
-                <div className="card foto">
-                  <div className="card-body">
-                    <FaCamera size="35px" /> 
-                    <p style={{paddingTop: '10px', color: '#989898', cursor: 'pointer'}}  onClick={handleAddPhoto}>Tambahkan Foto</p>
-                    <input type="file" accept="image/*" style={{ display: "none" }} ref={photoInputRef} /> 
-                  </div>
+
+      <div className="contact-detail">
+        <levelNumber />
+        <div class="card payment">
+            <div class="card-body">
+                <div className="ket-des">
+                <h3>Paket Destinasi {titleMap[destinationId]}</h3>
+                <h6>{subTitle[destinationId]}</h6>
+                <h6 class="harga">{Harga[destinationId]}</h6>
                 </div>
-              </div>
-              <div className="col">
-                <div className="card video">
-                  <div className="card-body">
-                    <FaVideo size="35px" /> 
-                    <p style={{paddingTop: '10px', color: '#989898', cursor: 'pointer'}} onClick={handleAddVideo}>Tambahkan Video</p>
-                    <input type="file" accept="video/*" style={{ display: "none" }} ref={videoInputRef} /> 
-                  </div>
+                <img src={imageMap[destinationId]} alt="Destination" style={{height: '220px', width: '380px', marginTop: '-150px', marginLeft: '30px'}}/>
+                <div class="container form2">
+                <div class="row">
+                    <div class="col">
+                    <p style={{textAlign: 'start', marginLeft: '-30px', color: '#777777'}}>Tanggal Pergi</p>
+                        <form className="t-p" role="search">
+                            <input className="form-control me-2 t-p" type="date" placeholder="HH/BB/TTTT" aria-label="Search" />
+                        </form>
+                    </div>
+                    <div class="col">
+                    <p style={{textAlign: 'start', marginLeft: '-30px', color: '#777777'}}>Tanggal Pulang</p>
+                        <form className="t-p" role="search">
+                            <input className="form-control me-2 t-p" type="date" placeholder="HH/BB/TTTT" aria-label="Search" />
+                        </form>
+                    </div>
                 </div>
-              </div>
+                </div>
+                <p style={{textAlign: 'start', marginLeft: '-20px', color: '#777777'}}>Jumlah Wisatawan</p>
+                <div class="mb-3">
+                <input type="name" class="form-control t-p" id="exampleFormControlInput1" placeholder="" style={{marginLeft: '30px'}}></input>
+                </div>
+                <button className="btn-next-page"><Link to={`/payment3?Id=${destinationId}`}>NEXT</Link></button>
             </div>
-          </div>
-          <input class="form-control form-control-lg ulasan" type="text" placeholder="Bagikan Ulasanmu Disini" ></input>
-          <button className="btn-ulasan" type="submit">KIRIM ULASAN</button>
         </div>
       </div>
 
@@ -161,7 +180,4 @@ function Review() {
   );
 }
 
-export default Review;
-
-
-
+export default Payment2;

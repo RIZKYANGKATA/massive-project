@@ -98,7 +98,7 @@ function Aceh() {
               <div className="dedes"> 
               <h2>Pulau Weh, Aceh</h2> 
               <p>Aceh</p>
-              <p>Mulai Dari <b>RP 560.000</b></p> 
+              <p>Mulai Dari <b>RP 960.000</b></p> 
               <div className="info">
               <h5>Details</h5>
               <p>Pulau Weh, yang terletak di ujung barat Indonesia di Provinsi Aceh, adalah surga tersembunyi dengan keindahan alam bawah laut yang menakjubkan dan pemandangan alam yang memukau.Pulau Weh menawarkan kombinasi sempurna antara keindahan alam bawah laut, pantai yang indah, dan aktivitas petualangan yang menarik. Dengan suasana yang tenang dan alami, Pulau Weh adalah destinasi yang ideal untuk berlibur dan melepaskan diri dari hiruk-pikuk kehidupan sehari-hari.</p>
@@ -117,7 +117,7 @@ function Aceh() {
                 </li>
               </ul>
               </div>
-              <button className="btn-book-now" type="submit">BOOK NOW</button>
+              <button className="btn-book-now" type="submit"><Link to="/payment?Id=1">BOOK NOW</Link></button>
             </div>
             </div>
         </div>

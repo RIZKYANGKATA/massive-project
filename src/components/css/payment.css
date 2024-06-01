@@ -1,0 +1,96 @@
+    .contact-detail{
+        padding-top: 200px;
+    }
+
+.payment{
+    margin-left: 80px;
+    width: 1110px;
+    height: 730px;
+    border-radius: 8px;
+    border-color: black;
+}
+
+.payment p{
+    padding-left: 50px;
+    padding-top: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #444343;
+}
+
+.payment h5 {
+    padding-top: 50px;
+    text-align: start;
+    padding-left: 39px;
+    color: #333333;
+}
+
+.name{
+    margin-top: 10px;
+    margin-left:  -5px;
+    border-radius: 10px;
+    height: 65px;
+}
+
+.email-p{
+    margin-top: 10px;
+    margin-left:  -5px;
+    border-radius: 10px;
+    height: 65px;
+}
+
+.phone-p{
+    margin-top: 10px;
+    margin-left:  -5px;
+    border-radius: 10px;
+    height: 65px;
+}
+
+.btn-next-page{
+  border-radius: 100px;
+  background-color: #011526;
+  color: white;
+  width: 180px;
+  height: 40px;
+  border: #011526;
+  margin-left: 850px;
+  margin-top: 50px;
+}
+
+.ket-des{
+    text-align: start;
+    padding-left: 440px;
+    padding-top: 70px;
+}
+
+.harga{
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+.t-p{
+    border-radius: 0;
+    width: 500px;
+    margin-left: 10px;
+    width: 455px;
+    border-radius: 8px;
+}
+
+.form2{
+    padding-top: 30px;
+}
+
+.pembayaran2{
+    padding-top: 50px;
+}
+
+.btn-done{
+  border-radius: 100px;
+  background-color: #011526;
+  color: white;
+  width: 180px;
+  height: 40px;
+  border: #011526;
+  margin-left: 850px;
+  margin-bottom: 100px;
+}

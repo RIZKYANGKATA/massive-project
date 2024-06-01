@@ -17,6 +17,8 @@ import niasImage from '../assets/images/nias.jpg';
 import papuaImage from '../assets/images/papua.jpg';
 import banyuwangiImage from '../assets/images/banyuwangi.jpg';
 import b2Image from '../assets/images/b2.jpg';
+import labuanBajoImage from '../assets/images/labuanBajo.jpg';
+import divingLabaImage from '../assets/images/divingLaba.jpg'; 
 import tobaImage from '../assets/images/toba.png';
 import palembangImage from '../assets/images/palembang.png';
 import semarangImage from '../assets/images/semarang.png';
@@ -136,7 +138,7 @@ function Home() {
               title="Pulau Weh, Aceh"
               subTitle="Aceh"
               description="Pulau Weh memiliki keistimewaan menjadi tempat di mana garis lintang 0 derajat atau dikenal Kilometer 0 Indonesia. "
-              harga="RP 560.000"
+              harga="RP 960.000"
               rating={4}
             />
             <Link to="/aceh"></Link>
@@ -158,7 +160,7 @@ function Home() {
               title="Pulau Derawan" 
               subTitle="Kalimantan Timur"
               description="kepulauan ini terdapat sejumlah objek wisata bahari menawan, salah satunya Taman Bawah Laut"
-              harga="RP 560.000"
+              harga="RP 1000.000"
               rating={4}
             />
             <Link to="/derawan"></Link>
@@ -271,7 +273,7 @@ function Home() {
           <div class="row align-items-center">
             <div class="col">
             <div className="col">
-              <img src={b2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
+              <img src={labuanBajoImage} className="img-fluid custom-img" alt="Teman Wisata 1" />
             </div>
             </div>
             <div class="col">
@@ -294,7 +296,41 @@ function Home() {
               <h5>Private Tour</h5>
               <p>1,1 juta</p>
               <p style={{fontSize: '25px', fontWeight: 'normal', marginLeft: '15px'}}>per orang</p>
-              <button className="btn-bopa" type="submit" style={{marginTop: '60px', marginRight: '0px'}}><Link to="">BOOK NOW</Link></button>
+              <button className="btn-bopa" type="submit"><Link to="/payment?Id=4">BOOK NOW</Link></button>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div className="card mb-3">
+        <div class="container text-center">
+          <div class="row align-items-center">
+            <div class="col">
+            <div className="col">
+              <img src={divingLabaImage} className="img-fluid custom-img" alt="Teman Wisata 1" />
+            </div>
+            </div>
+            <div class="col">
+            <div className="card-body">
+                <p className="card-title">Diving</p>
+                <p className="card-title">Labuan Bajo</p>
+              <div className="p-k">
+                <p className="card-text">Paket One Day Trip Labuan Bajo</p>
+                <p className="card-text">Mengunjungi Air Terjun, Rumah</p>
+                <p className="card-text">Adat, dan Alam Budaya Flores.</p>
+              </div>
+                <ul className="inpa">
+                  <li><FaClock /> 1 hari</li>
+                  <li><FaUsers /> 5 pax</li>
+                  <li><FaMapMarkerAlt /> NTT</li>
+              </ul>
+            </div>
+            </div>
+            <div class="col nekon" style={{backgroundColor: '#EEE8DC', marginRight: '-30px', marginBottom: '0px', height: '300px', borderBottomRightRadius: '15px', borderTopRightRadius: '15px'}}>
+              <h5>Private Tour</h5>
+              <p>1 juta</p>
+              <p style={{fontSize: '25px', fontWeight: 'normal', marginLeft: '15px'}}>per orang</p>
+              <button className="btn-bopa" type="submit"><Link to="/payment?Id=5">BOOK NOW</Link></button>
             </div>
           </div>
         </div>
@@ -310,8 +346,8 @@ function Home() {
             </div>
             <div class="col">
             <div className="card-body">
-                <p className="card-title">Paket Tour</p>
-                <p className="card-title">Labuan Bajo 1 Hari</p>
+                <p className="card-title">Paket Wisata</p>
+                <p className="card-title">Bromo Sunrise 1 Hari</p>
               <div className="p-k">
                 <p className="card-text">Paket One Day Trip Labuan Bajo</p>
                 <p className="card-text">Mengunjungi Air Terjun, Rumah</p>
@@ -326,43 +362,9 @@ function Home() {
             </div>
             <div class="col nekon" style={{backgroundColor: '#EEE8DC', marginRight: '-30px', marginBottom: '0px', height: '300px', borderBottomRightRadius: '15px', borderTopRightRadius: '15px'}}>
               <h5>Private Tour</h5>
-              <p>1,1 juta</p>
+              <p>600 Ribu</p>
               <p style={{fontSize: '25px', fontWeight: 'normal', marginLeft: '15px'}}>per orang</p>
-              <button className="btn-bopa" type="submit" style={{marginTop: '60px', marginRight: '0px'}}><Link to="">BOOK NOW</Link></button>
-            </div>
-          </div>
-        </div>
-        </div>
-
-        <div className="card mb-3">
-        <div class="container text-center">
-          <div class="row align-items-center">
-            <div class="col">
-            <div className="col">
-              <img src={b2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
-            </div>
-            </div>
-            <div class="col">
-            <div className="card-body">
-                <p className="card-title">Paket Tour</p>
-                <p className="card-title">Labuan Bajo 1 Hari</p>
-              <div className="p-k">
-                <p className="card-text">Paket One Day Trip Labuan Bajo</p>
-                <p className="card-text">Mengunjungi Air Terjun, Rumah</p>
-                <p className="card-text">Adat, dan Alam Budaya Flores.</p>
-              </div>
-                <ul className="inpa">
-                  <li><FaClock /> 1 hari</li>
-                  <li><FaUsers /> 5 pax</li>
-                  <li><FaMapMarkerAlt /> NTT</li>
-              </ul>
-            </div>
-            </div>
-            <div class="col nekon" style={{backgroundColor: '#EEE8DC', marginRight: '-30px', marginBottom: '0px', height: '300px', borderBottomRightRadius: '15px', borderTopRightRadius: '15px'}}>
-              <h5>Private Tour</h5>
-              <p>1,1 juta</p>
-              <p style={{fontSize: '25px', fontWeight: 'normal', marginLeft: '15px'}}>per orang</p>
-              <button className="btn-bopa" type="submit" style={{marginTop: '60px', marginRight: '0px'}}><Link to="">BOOK NOW</Link></button>
+              <button className="btn-bopa" type="submit"><Link to="/payment?Id=6">BOOK NOW</Link></button>
             </div>
           </div>
         </div>

@@ -1,18 +1,15 @@
-import React, { useRef } from 'react'; 
-import { useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo_putihImage from '../assets/images/logo_putih.png';
 import backgroundImage from '../assets/images/background.jpg';
-import bromoImage from '../assets/images/bromo.jpg'; 
-import pulauDerawanImage from '../assets/images/pulauDerawan.jpg';
 import candiImage from '../assets/images/candi.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaCamera, FaVideo } from 'react-icons/fa';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { Link, useNavigate } from 'react-router-dom';
-import '../components/css/review.css';
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { faStar, faPaperclip, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import '../components/css/payment.css';
 
-function Review() {
+function Payment() {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -39,23 +36,6 @@ function Review() {
   const searchParams = new URLSearchParams(location.search);
   const destinationId = searchParams.get('Id');
 
-  const imageMap = {
-    '1': backgroundImage,
-    '2': bromoImage,
-    '3': pulauDerawanImage,
-  };
-
-  const photoInputRef = useRef(null);
-  const videoInputRef = useRef(null);
-
-  const handleAddPhoto = () => {
-    photoInputRef.current.click(); 
-  };
-
-  const handleAddVideo = () => {
-    videoInputRef.current.click(); 
-  };
-
   return (
     <>
       <div id="home">
@@ -78,43 +58,33 @@ function Review() {
           </div>
         </div>
       </div>
-      
-      <h1>ULASAN</h1>
-      <div className="card review">
-        <div className="card-body">
-          <img src={imageMap[destinationId]} alt="Destination" style={{height: '200px', width: '200px', borderRadius: '15px', marginTop: '30px', marginLeft: '30px'}}/>
-          <div className="nilai">
-            <p>Beri Penilaian</p>
-            <div className="bintang">
-              <FontAwesomeIcon icon={faStar} size="5px" />
-              <FontAwesomeIcon icon={faStar} size="5px" />
-              <FontAwesomeIcon icon={faStar} size="5px" />
-            </div>
-          </div>
-          <div className="container-2 text-center">
-            <div className="row align-items-center">
-              <div className="col">
-                <div className="card foto">
-                  <div className="card-body">
-                    <FaCamera size="35px" /> 
-                    <p style={{paddingTop: '10px', color: '#989898', cursor: 'pointer'}}  onClick={handleAddPhoto}>Tambahkan Foto</p>
-                    <input type="file" accept="image/*" style={{ display: "none" }} ref={photoInputRef} /> 
-                  </div>
+
+      <div className="contact-detail">
+        <div class="card payment">
+            <div class="card-body">
+                <p>Informasi ini untuk mengirimkan konfirmasi dan pembaruan pesanan</p>
+                <div class="container text-center">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h5>First Name
+                                <input class="form-control form-control-lg name" type="text" placeholder="Enter your first name " ></input>
+                            </h5>
+                        </div>
+                        <div class="col">
+                            <h5>Last Name
+                                <input class="form-control form-control-lg name" type="text" placeholder="Enter your last name " ></input>
+                            </h5>
+                        </div>
+                    </div>
+                    <h5>Email
+                        <input class="form-control form-control-lg email-p" type="text" placeholder="Enter your first email " ></input>
+                    </h5>
+                    <h5>Phone Number
+                        <input class="form-control form-control-lg phone-p" type="text" placeholder="Enter your phone number " ></input>
+                    </h5>
+                    <button className="btn-next-page"><Link to={`/payment2?Id=${destinationId}`}>NEXT</Link></button>
                 </div>
-              </div>
-              <div className="col">
-                <div className="card video">
-                  <div className="card-body">
-                    <FaVideo size="35px" /> 
-                    <p style={{paddingTop: '10px', color: '#989898', cursor: 'pointer'}} onClick={handleAddVideo}>Tambahkan Video</p>
-                    <input type="file" accept="video/*" style={{ display: "none" }} ref={videoInputRef} /> 
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-          <input class="form-control form-control-lg ulasan" type="text" placeholder="Bagikan Ulasanmu Disini" ></input>
-          <button className="btn-ulasan" type="submit">KIRIM ULASAN</button>
         </div>
       </div>
 
@@ -161,7 +131,4 @@ function Review() {
   );
 }
 
-export default Review;
-
-
-
+export default Payment;

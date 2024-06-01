@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo_putihImage from '../assets/images/logo_putih.png';
 import b2Image from '../assets/images/b2.jpg';
+import labuanBajoImage from '../assets/images/labuanBajo.jpg';
+import divingLabaImage from '../assets/images/divingLaba.jpg'; 
+import bromoImage from '../assets/images/bromo.jpg';
+import banyuwangi2Image from '../assets/images/banyuwangi2.jpeg';
 import weh2Image from '../assets/images/weh2.jpg';
 import der4Image from '../assets/images/der4.jpeg';
 import temanWisataImage from '../assets/images/temanWisata.png';
@@ -77,7 +81,7 @@ function Packages() {
           <div class="row align-items-center">
             <div class="col">
             <div className="col">
-              <img src={b2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
+              <img src={labuanBajoImage} className="img-fluid custom-img" alt="Teman Wisata 1" />
             </div>
             </div>
             <div class="col">
@@ -100,7 +104,7 @@ function Packages() {
               <h5>Private Tour</h5>
               <p>1,1 juta</p>
               <p style={{fontSize: '25px', fontWeight: 'normal', marginLeft: '45px'}}>per orang</p>
-              <button className="btn-bopa" type="submit" style={{marginTop: '60px', marginRight: '0px'}}><Link to="">BOOK NOW</Link></button>
+              <button className="btn-bopa" type="submit"><Link to="/payment?Id=4">BOOK NOW</Link></button>
             </div>
           </div>
         </div>
@@ -111,13 +115,13 @@ function Packages() {
           <div class="row align-items-center">
             <div class="col">
             <div className="col">
-              <img src={b2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
+              <img src={divingLabaImage} className="img-fluid custom-img" alt="Teman Wisata 1" />
             </div>
             </div>
             <div class="col">
             <div className="card-body">
-                <p className="card-title">Paket Tour</p>
-                <p className="card-title">Labuan Bajo 1 Hari</p>
+                <p className="card-title">Diving</p>
+                <p className="card-title">Labuan Bajo</p>
               <div className="p-k">
                 <p className="card-text">Paket One Day Trip Labuan Bajo</p>
                 <p className="card-text">Mengunjungi Air Terjun, Rumah</p>
@@ -132,9 +136,9 @@ function Packages() {
             </div>
             <div class="col nekon" style={{backgroundColor: '#EEE8DC', marginRight: '-30px', marginBottom: '0px', height: '300px', borderBottomRightRadius: '15px', borderTopRightRadius: '15px'}}>
               <h5>Private Tour</h5>
-              <p>1,1 juta</p>
+              <p>1 juta</p>
               <p style={{fontSize: '25px', fontWeight: 'normal', marginLeft: '45px'}}>per orang</p>
-              <button className="btn-bopa" type="submit" style={{marginTop: '60px', marginRight: '0px'}}><Link to="">BOOK NOW</Link></button>
+              <button className="btn-bopa" type="submit"><Link to="/payment?Id=5">BOOK NOW</Link></button>
             </div>
           </div>
         </div>
@@ -150,8 +154,8 @@ function Packages() {
             </div>
             <div class="col">
             <div className="card-body">
-                <p className="card-title">Paket Tour</p>
-                <p className="card-title">Labuan Bajo 1 Hari</p>
+                <p className="card-title">Paket Wisata</p>
+                <p className="card-title">Bromo Sunrise 1 Hari</p>
               <div className="p-k">
                 <p className="card-text">Paket One Day Trip Labuan Bajo</p>
                 <p className="card-text">Mengunjungi Air Terjun, Rumah</p>
@@ -166,9 +170,9 @@ function Packages() {
             </div>
             <div class="col nekon" style={{backgroundColor: '#EEE8DC', marginRight: '-30px', marginBottom: '0px', height: '300px', borderBottomRightRadius: '15px', borderTopRightRadius: '15px'}}>
               <h5>Private Tour</h5>
-              <p>1,1 juta</p>
+              <p>600 Ribu</p>
               <p style={{fontSize: '25px', fontWeight: 'normal', marginLeft: '45px'}}>per orang</p>
-              <button className="btn-bopa" type="submit" style={{marginTop: '60px', marginRight: '0px'}}><Link to="">BOOK NOW</Link></button>
+              <button className="btn-bopa" type="submit"><Link to="/payment?Id=6">BOOK NOW</Link></button>
             </div>
           </div>
         </div>
@@ -179,13 +183,13 @@ function Packages() {
           <div class="row align-items-center">
             <div class="col">
             <div className="col">
-              <img src={b2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
+              <img src={bromoImage} className="img-fluid custom-img" alt="Teman Wisata 1" />
             </div>
             </div>
             <div class="col">
             <div className="card-body">
-                <p className="card-title">Paket Tour</p>
-                <p className="card-title">Labuan Bajo 1 Hari</p>
+                <p className="card-title">Paket Wisata</p>
+                <p className="card-title">Wae Rebo 2d 1n</p>
               <div className="p-k">
                 <p className="card-text">Paket One Day Trip Labuan Bajo</p>
                 <p className="card-text">Mengunjungi Air Terjun, Rumah</p>
@@ -200,9 +204,9 @@ function Packages() {
             </div>
             <div class="col nekon" style={{backgroundColor: '#EEE8DC', marginRight: '-30px', marginBottom: '0px', height: '300px', borderBottomRightRadius: '15px', borderTopRightRadius: '15px'}}>
               <h5>Private Tour</h5>
-              <p>1,1 juta</p>
+              <p>1,6 juta</p>
               <p style={{fontSize: '25px', fontWeight: 'normal', marginLeft: '45px'}}>per orang</p>
-              <button className="btn-bopa" type="submit" style={{marginTop: '60px', marginRight: '0px'}}><Link to="">BOOK NOW</Link></button>
+              <button className="btn-bopa" type="submit" style={{marginTop: '60px', marginRight: '0px'}}><Link to="/payment">BOOK NOW</Link></button>
             </div>
           </div>
         </div>
@@ -213,13 +217,13 @@ function Packages() {
           <div class="row align-items-center">
             <div class="col">
             <div className="col">
-              <img src={b2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
+              <img src={banyuwangi2Image} className="img-fluid custom-img" alt="Teman Wisata 1" />
             </div>
             </div>
             <div class="col">
             <div className="card-body">
-                <p className="card-title">Paket Tour</p>
-                <p className="card-title">Labuan Bajo 1 Hari</p>
+                <p className="card-title">Paket Wisata</p>
+                <p className="card-title">Banyuwangi 2d 1n</p>
               <div className="p-k">
                 <p className="card-text">Paket One Day Trip Labuan Bajo</p>
                 <p className="card-text">Mengunjungi Air Terjun, Rumah</p>
@@ -234,15 +238,13 @@ function Packages() {
             </div>
             <div class="col nekon" style={{backgroundColor: '#EEE8DC', marginRight: '-30px', marginBottom: '0px', height: '300px', borderBottomRightRadius: '15px', borderTopRightRadius: '15px'}}>
               <h5>Private Tour</h5>
-              <p>1,1 juta</p>
+              <p>1,2 juta</p>
               <p style={{fontSize: '25px', fontWeight: 'normal', marginLeft: '45px'}}>per orang</p>
               <button className="btn-bopa" type="submit" style={{marginTop: '60px', marginRight: '0px'}}><Link to="">BOOK NOW</Link></button>
             </div>
           </div>
         </div>
         </div>  
-
-
       </div>
 
       <div id="contactUs">

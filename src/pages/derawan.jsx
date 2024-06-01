@@ -101,7 +101,7 @@ function Derawan() {
               <div className="dedes"> 
               <h2>Pulau Derawan</h2> 
               <p>Kalimantan Timur</p>
-              <p>Mulai Dari <b>RP 560.000</b></p> 
+              <p>Mulai Dari <b>RP 1000.000</b></p> 
               <div className="info">
               <h5>Details</h5>
               <p>Pulau Weh, yang terletak di ujung barat Indonesia di Provinsi Aceh, adalah surga tersembunyi dengan keindahan alam bawah laut yang menakjubkan dan pemandangan alam yang memukau.Pulau Weh menawarkan kombinasi sempurna antara keindahan alam bawah laut, pantai yang indah, dan aktivitas petualangan yang menarik. Dengan suasana yang tenang dan alami, Pulau Weh adalah destinasi yang ideal untuk berlibur dan melepaskan diri dari hiruk-pikuk kehidupan sehari-hari.</p>
@@ -120,7 +120,7 @@ function Derawan() {
                 </li>
               </ul>
               </div>
-              <button className="btn-book-now" type="submit">BOOK NOW</button>
+              <button className="btn-book-now" type="submit"><Link to="/payment?Id=3">BOOK NOW</Link></button>
             </div>
             </div>
         </div>
