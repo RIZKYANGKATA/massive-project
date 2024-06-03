@@ -16,6 +16,7 @@ import Review from './pages/review';
 import Payment from './pages/payment';
 import Payment2 from './pages/payment2';
 import Payment3 from './pages/payment3';
+import DetailPackages from './pages/detailPackages';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -41,6 +42,7 @@ function App() {
         <Route path="/payment" element={<Payment/>} />
         <Route path="/payment2" element={<Payment2/>} />
         <Route path="/payment3" element={<Payment3/>} />
+        <Route path="/detailPackages" element={<DetailPackages/>} />
       </Routes>
     </>
 

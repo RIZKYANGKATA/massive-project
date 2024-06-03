@@ -86,8 +86,10 @@ function Packages() {
             </div>
             <div class="col">
             <div className="card-body">
-                <p className="card-title">Paket Tour</p>
-                <p className="card-title">Labuan Bajo 1 Hari</p>
+                <Link to="/detailPackages?Id=4">
+                  <p className="card-title" style={{color: 'black'}}>Paket Tour</p>
+                  <p className="card-title" style={{color: 'black'}}>Labuan Bajo 1 Hari</p>
+                </Link>
               <div className="p-k">
                 <p className="card-text">Paket One Day Trip Labuan Bajo</p>
                 <p className="card-text">Mengunjungi Air Terjun, Rumah</p>
@@ -120,8 +122,10 @@ function Packages() {
             </div>
             <div class="col">
             <div className="card-body">
-                <p className="card-title">Diving</p>
-                <p className="card-title">Labuan Bajo</p>
+              <Link to="/detailPackages?Id=5">
+                  <p className="card-title" style={{color: 'black'}}>Diving</p>
+                  <p className="card-title" style={{color: 'black'}}>Labuan Bajo</p>
+                </Link>
               <div className="p-k">
                 <p className="card-text">Paket One Day Trip Labuan Bajo</p>
                 <p className="card-text">Mengunjungi Air Terjun, Rumah</p>
@@ -154,8 +158,10 @@ function Packages() {
             </div>
             <div class="col">
             <div className="card-body">
-                <p className="card-title">Paket Wisata</p>
-                <p className="card-title">Bromo Sunrise 1 Hari</p>
+               <Link to="/detailPackages?Id=6">
+                  <p className="card-title" style={{color: 'black'}}>Paket Wisata</p>
+                  <p className="card-title" style={{color: 'black'}}>Bromo Sunrise 1 Hari</p>
+                </Link>
               <div className="p-k">
                 <p className="card-text">Paket One Day Trip Labuan Bajo</p>
                 <p className="card-text">Mengunjungi Air Terjun, Rumah</p>

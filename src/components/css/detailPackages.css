@@ -1,0 +1,49 @@
+.de-pa h2 {
+    padding-top: 150px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.de-pa h4 {
+    padding-top: 5px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.pi-de{
+    padding-top: 40px;
+}
+
+.des{
+  border-radius: 15px;
+  background-color: #EEE8DC;
+  color: #011526;
+  width: 180px;
+  height: 40px;
+  align-items: end;
+  justify-content: end;
+  border: #011526;
+  font-weight: 700;
+}
+
+.last-i{
+    padding-top: 120px;
+    margin-left: 20px;
+    text-align: start;
+}
+
+.btn-dede{
+  border-radius: 100px;
+  background-color: #011526;
+  color: white;
+  width: 180px;
+  height: 40px;
+  margin-top: 60px;
+  margin-left: 540px;
+  border: #011526;
+}
+
