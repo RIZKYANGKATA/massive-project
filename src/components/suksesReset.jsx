@@ -4,50 +4,15 @@ import backgroundImage from '../assets/images/background.jpg'
 import { Link, useNavigate } from 'react-router-dom'
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faKey } from '@fortawesome/free-solid-svg-icons'
-// import axios from 'axios'
+import { faKey, faMailBulk, faCheck } from '@fortawesome/free-solid-svg-icons'
 
-function ForgotPassword() {
+function SuksesReset() {
   const navigate = useNavigate()
-  const [email, setEmail] = useState('')
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
-
-    if (!email) {
-      console.log('Please fill in all fields')
-      return
-    } else {
-      try {
-        const response = await axios.post(
-          'http://localhost:5000/api/reset-password',
-          {
-            email: email,
-          },
-        )
-
-        console.log(
-          'data response',
-          response.status === 200 ? 'ok' : 'not ok',
-          email,
-        )
-
-        if (response.status === 200) {
-          navigate(`/cekemail/${email}`)
-        } else {
-          console.log('data error', response.status)
-        }
-      } catch (error) {
-        console.log('Error logging in: ', error)
-      }
-    }
+    navigate('/login')
   }
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   navigate('/setpassword')
-  //   console.log('Email:', email)
-  // }
 
   return (
     <>
@@ -64,7 +29,7 @@ function ForgotPassword() {
           <div className="card" style={{ width: '400px' }}>
             <div className="card-body" style={{ fontSize: '15px' }}>
               <FontAwesomeIcon
-                icon={faKey}
+                icon={faCheck}
                 size="3x"
                 style={{ marginLeft: '160px', marginTop: '50px' }}
               />
@@ -73,29 +38,18 @@ function ForgotPassword() {
                   className="icon-circle"
                   style={{ marginBottom: '20px' }}
                 ></div>
-                <h4 className="card-title">Forgot Password</h4>
+                <h4 className="card-title">Password Reset</h4>
               </div>
               <form onSubmit={handleSubmit}>
                 <p style={{ textAlign: 'center' }}>
-                  No worries, we'll send you reset instructions.
+                  Your password has been successfully reset. Click below to
+                  login in magically.
                 </p>
-                <div className="mb-3">
-                  <label htmlFor="email" className="form-label">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    className="form-control custom-input"
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                </div>
+
                 <button type="submit" className="btn btn w-100 mb-1">
-                  Reset Password
+                  Continue
                 </button>
+
                 <Link
                   to="/login"
                   className="d-block mb-2"
@@ -117,4 +71,4 @@ function ForgotPassword() {
   )
 }
 
-export default ForgotPassword
+export default SuksesReset

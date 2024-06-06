@@ -94,3 +94,46 @@
   margin-left: 850px;
   margin-bottom: 100px;
 }
+
+.buktiPembayaran{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    border: none;
+    width: 220px;
+    height: 120px;
+    color: #989898;
+}
+
+.pilihGambar{
+  border-radius: 100px;
+  background-color: #011526;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border: #011526;
+  margin-left: 340px;
+  margin-bottom: -630px;
+}
+
+.btn-unggah{
+    border-radius: 100px;
+    background-color: #011526;
+    color: white;
+    width: 180px;
+    height: 40px;
+    border: #011526;
+    margin-left: 170px;
+    margin-top: -70px;
+  }
+
+.btn-cekTiket{
+    border-radius: 100px;
+    background-color: #011526;
+    color: white;
+    width: 180px;
+    height: 40px;
+    border: #011526;
+    margin-left: 445px;
+    margin-top: 40px;
+}

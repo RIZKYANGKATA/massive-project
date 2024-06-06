@@ -2,6 +2,7 @@
 .level-container {
     display: flex;
     align-items: center;
+    padding-top: 800px;
   }
   
   .number {

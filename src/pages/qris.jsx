@@ -4,6 +4,7 @@ import logo_putihImage from '../assets/images/logo_putih.png';
 import backgroundImage from '../assets/images/background.jpg';
 import bromoImage from '../assets/images/bromo.jpg'; 
 import pulauDerawanImage from '../assets/images/pulauDerawan.jpg';
+import barCodeImage from '../assets/images/barCode.png';
 import b2Image from '../assets/images/b2.jpg';
 import labuanBajoImage from '../assets/images/labuanBajo.jpg';
 import divingLabaImage from '../assets/images/divingLaba.jpg'; 
@@ -17,7 +18,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../components/css/payment.css';
 import levelNumber from '../components/levelNumber';
 
-function Payment3() {
+function Qris() {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -99,42 +100,28 @@ function Payment3() {
         <div className="card payment">
           <div className="card-body">
             <div className="pembayaran">
-              <h3 style={{ textAlign: 'start', paddingLeft: '20px', paddingTop: '30px' }}>Pilih Metode Pembayaran</h3>
+              <h3 style={{ textAlign: 'start', paddingLeft: '20px', paddingTop: '30px' }}>Scan QR Code</h3>
             </div>
             <div className="container text-start pembayaran2">
               <div className="row align-items-center">
-                <div className="col" style={{paddingBottom: '125px'}}>
+                <div className="col" style={{paddingBottom: '95px'}}>
                   <div className="card">
                     <div className="card-body">
                       <div className="form-check form-check-inline">
-                        <label className="form-check-label" htmlFor="inlineRadio1" style={{ verticalAlign: 'middle' }}>
-                          <h6 style={{ display: 'inline-block', marginLeft: '-25px' }}>No Rekening</h6>
+                        <label className="form-check-label" htmlFor="inlineRadio2">
+                          <h6>QRIS</h6>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div className="card rekening" style={{ width: '32rem', marginTop: '20px' }}>
-                        <ul className="list-group list-group-flush">
-                          <li className="list-group-item"><FontAwesomeIcon icon={faBank} style={{ marginLeft: '10px' }} /> BRI</li>
-                          <li className="list-group-item"><FontAwesomeIcon icon={faBank} style={{ marginLeft: '10px' }} /> BNI</li>
-                          <li className="list-group-item"><FontAwesomeIcon icon={faBank} style={{ marginLeft: '10px' }} /> MANDIRI</li>
-                          <li className="list-group-item"><FontAwesomeIcon icon={faBank} style={{ marginLeft: '10px' }} /> BCA</li>
-                        </ul>
-                      </div>
-                    <Link to={`/qris?Id=${destinationId}`}>
-                        <div className="card" style={{ marginTop: '30px' }}>
-                        <div className="card-body">
-                          <div className="form-check form-check-inline">
-                            <label className="form-check-label" htmlFor="inlineRadio2">
-                              <h6>QRIS</h6>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                </div>                    
+                  <div className="qris" style={{ marginTop: '30px', height: '337px' }}>
+                    <div className="card-body">
+                      <img src={barCodeImage} alt="Bar Code" className="d-inline-block align-text-top" style={{ width: '265px', height: '251px', marginLeft: '95px', marginTop: '25px' }} />
+                    </div>
+                  </div>
+                </div>
                     <div class="col">
-                            <div class="card" style={{marginBottom: '50px', height: '420px'}}>
+                            <div class="card" style={{marginTop: '-110px', height: '420px'}}>
                                 <h3 style={{marginTop: '20px', marginLeft: '20px'}}>Ringkasan Tiket Anda</h3>
                                 <div class="card-body">
                                     <div class="container text-center">
@@ -163,7 +150,7 @@ function Payment3() {
                                 </div>
                             </div>
                         </div>
-                        <button className="btn-done"><Link to={`/buktiPembayaran?Id=${destinationId}`}>BOOK</Link></button>
+                        <button className="btn-done"><Link to={`/doneBook?Id=${destinationId}`}>BOOK</Link></button>
                     </div>
                 </div>
             </div>
@@ -213,4 +200,4 @@ function Payment3() {
   );
 }
 
-export default Payment3;
+export default Qris;
