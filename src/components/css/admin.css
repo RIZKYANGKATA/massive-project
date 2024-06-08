@@ -1,0 +1,130 @@
+.admin{
+    padding-top: 50px;
+}
+
+.admin h4{
+    padding-top: 80px;
+    padding-left: 130px;
+}
+
+.admin-card{
+    width: 450px;
+    height: 230px;
+    margin-left: 40px;
+    margin-top: 40px;
+    background-color: #011526;
+    color: white;
+}
+
+.detail-card{
+    padding-top: 30px;
+}
+
+.admin h1{
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.informasi-admin{
+    padding-top: 50px;
+}
+
+.btn-add-admin{
+    border-radius: 100px;
+    background-color: #011526;
+    color: white;
+    width: 180px;
+    height: 40px;
+    align-items: end;
+    justify-content: end;
+    border: #011526;
+    margin-left: 555px;
+    margin-top: 100px;
+}
+
+.id-admin{
+    width: 965px;
+    border-radius: 8px;
+    border-color: black ;
+    font-weight: 600;
+    margin-left: 150px;
+}
+
+.nama-admin{
+    width: 965px;
+    border-radius: 8px;
+    border-color: black ;
+    font-weight: 600;
+    margin-left: 150px;
+}
+
+.foto-admin{
+    width: 965px;
+    border-radius: 8px;
+    border-color: black ;
+    font-weight: 600;
+    margin-left: 150px;
+}
+
+.username-admin{
+    width: 965px;
+    border-radius: 8px;
+    border-color: black ;
+    font-weight: 600;
+    margin-left: 150px;
+}
+
+.password-admin{
+    width: 965px;
+    border-radius: 8px;
+    border-color: black ;
+    font-weight: 600;
+    margin-left: 150px;
+}
+
+.btn-simpan-admin{
+    border-radius: 100px;
+    background-color: #011526;
+    color: white;
+    width: 180px;
+    height: 40px;
+    align-items: end;
+    justify-content: end;
+    border: #011526;
+    margin-left: 555px;
+    margin-top: 50px;
+}
+
+.filter{
+    border-radius: 15px;
+    border-color: black;
+}
+
+.filter1{
+    border-radius: 15px;
+    border-color: black;
+    width: 215px;
+}
+
+.filter2{
+    border-radius: 15px;
+    border-color: black;
+    width: 420px;
+    margin-left: -80px;
+}
+
+.filter3{
+    border-radius: 15px;
+    border-color: black;
+    width: 310px;
+}
+
+.history{
+    padding-top: 40px;
+}
+
+.hisad{
+    padding-top: 80px;
+}
+

@@ -163,7 +163,7 @@ function Profile() {
             <input type="file" className="form-control ktp-profil" id="ktpInput" onChange={handleFileUpload}></input>
           </div>
           <div className="d-flex justify-content-end mb-3">
-            <button className="btn-cancle me-2"><Link to={`/payment3?Id=${destinationId}`}>CANCLE</Link></button>
+            <button className="btn-cancle me-2"><Link to="/">CANCLE</Link></button>
             <button className="btn-save"><Link to="/">SAVE</Link></button>
           </div>
         </div>

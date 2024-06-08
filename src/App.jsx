@@ -22,6 +22,12 @@ import DoneBook from './pages/doneBook';
 import BuktiPembayaran from './pages/buktiPembayaran';
 import CekTiket from './pages/cekTiket';
 import Profile from './pages/profile';
+import Admin from './admin/admin';
+import InformasiAdmin from './admin/informasiAdmin';
+import TambahAdmin from './admin/tambahAdmin';
+import EditAdmin from './admin/editAdmin';
+import PembayaranAdmin from './admin/pembayaranAdmin';
+import HistoryAdmin from './admin/historyAdmin';
 import { Route, Routes } from 'react-router-dom';
 
 import CekEmail from './components/cekEmail'
@@ -57,6 +63,12 @@ function App() {
         <Route path="/doneBook" element={<DoneBook/>} />
         <Route path="/cekTiket" element={<CekTiket/>} />
         <Route path="/profile" element={<Profile/>} />
+        <Route path="/admin" element={<Admin/>} />
+        <Route path="/informasiAdmin" element={<InformasiAdmin/>} />
+        <Route path="/tambahAdmin" element={<TambahAdmin/>} />
+        <Route path="/editAdmin" element={<EditAdmin/>} />
+        <Route path="/pembayaranAdmin" element={<PembayaranAdmin/>} />
+        <Route path="/historyAdmin" element={<HistoryAdmin/>} />
       </Routes>
     </>
   );
