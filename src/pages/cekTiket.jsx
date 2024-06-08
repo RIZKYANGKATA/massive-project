@@ -4,17 +4,13 @@ import logo_putihImage from '../assets/images/logo_putih.png';
 import backgroundImage from '../assets/images/background.jpg';
 import bromoImage from '../assets/images/bromo.jpg'; 
 import pulauDerawanImage from '../assets/images/pulauDerawan.jpg';
+import barCodeImage from '../assets/images/barCode.png';
 import b2Image from '../assets/images/b2.jpg';
 import labuanBajoImage from '../assets/images/labuanBajo.jpg';
 import divingLabaImage from '../assets/images/divingLaba.jpg'; 
-import bcaImage from '../assets/images/bca.png';
-import bniImage from '../assets/images/bni.png';
-import briImage from '../assets/images/bri.png';
-import mandiri2Image from '../assets/images/mandiri2.png';
-import qrisImage from '../assets/images/qris.png';
 import candiImage from '../assets/images/candi.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaCheckCircle } from 'react-icons/fa';
 import { faStar, faPaperclip, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { faUniversity, faBank } from '@fortawesome/free-solid-svg-icons';
 
@@ -22,7 +18,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../components/css/payment.css';
 import levelNumber from '../components/levelNumber';
 
-function Payment3() {
+function CekTiket() {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -76,6 +72,10 @@ function Payment3() {
     '6': 'RP 600.000',
   }
 
+  const handleFileUpload = () => {
+    document.getElementById('fileInput').click();
+  };
+
   return (
     <>
       <div id="home">
@@ -100,78 +100,30 @@ function Payment3() {
       </div>
 
       <div className="contact-detail">
-        <levelNumber />
-        <div className="card payment">
+        <h2 style={{paddingLeft: '150px', paddingBottom: '10px', fontWeight: '700'}}>My Tickets</h2>
+        <div className="card payment" style={{height: '395px', marginTop: '30px'}}>
           <div className="card-body">
-            <div className="pembayaran">
-              <h3 style={{ textAlign: 'start', paddingLeft: '20px', paddingTop: '30px' }}>Pilih Metode Pembayaran</h3>
-            </div>
-            <div className="container text-start pembayaran2">
-              <div className="row align-items-center">
-                <div className="col" style={{paddingBottom: '125px'}}>
-                  <div className="card">
-                    <div className="card-body">
-                      <div className="form-check form-check-inline">
-                        <label className="form-check-label" htmlFor="inlineRadio1" style={{ verticalAlign: 'middle' }}>
-                          <h6 style={{ display: 'inline-block', marginLeft: '-25px' }}>No Rekening</h6>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card rekening" style={{ width: '32rem', marginTop: '20px' }}>
-                        <ul className="list-group list-group-flush">
-                          <li className="list-group-item"><img src={briImage} alt="" style={{height: '15px', width: '40px'}} /> 12345678901234</li>
-                          <li className="list-group-item"><img src={bniImage} alt="" style={{height: '15px', width: '40px'}} /> 12345678901234</li>
-                          <li className="list-group-item"><img src={mandiri2Image} alt="" style={{height: '15px', width: '40px'}} /> 12345678901234</li>
-                          <li className="list-group-item"><img src={bcaImage} alt="" style={{height: '15px', width: '40px'}} /> 12345678901234</li>
-                        </ul>
-                      </div>
-                    <Link to={`/qris?Id=${destinationId}`}>
-                        <div className="card" style={{ marginTop: '30px' }}>
-                        <div className="card-body">
-                          <div className="form-check form-check-inline">
-                            <label className="form-check-label" htmlFor="inlineRadio2">
-                              <img src={qrisImage} alt="" style={{height: '25px', width: '50px'}} />
-                            </label>
-                          </div>
+            <div className="card" style={{width: '1000px', height: '285px', marginTop: '40px', marginLeft: '30px'}}>
+                <div class="container text-center">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h5 style={{paddingTop: '15px', color: 'gray'}}>Tour Name</h5>
                         </div>
-                      </div>
-                    </Link>
-                </div>                    
-                    <div class="col">
-                            <div class="card" style={{marginBottom: '50px', height: '420px'}}>
-                                <h3 style={{marginTop: '20px', marginLeft: '20px'}}>Ringkasan Tiket Anda</h3>
-                                <div class="card-body">
-                                    <div class="container text-center">
-                                        <div class="row align-items-center">
-                                            <div class="col">
-                                                <img src={imageMap[destinationId]} alt="Destination" style={{height: '120px', width: '250px', marginTop: '10px', marginRight: '-70px' }}/>
-                                            </div>
-                                            <div class="col">
-                                                <p style={{fontSize: '18px',marginTop: '-60px', color: '#021526'}}><b>{titleMap[destinationId]}</b></p>
-                                                <p style={{fontSize: '18px', marginTop: '-60px', color: '#021526', marginLeft: '-20px'}}><b>Tanggal Pergi</b></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="container text-start">
-                                    <div class="row align-items-center" style={{paddingBottom: '80px'}}>
-                                        <div class="col">
-                                            <p style={{fontSize: '18px', fontWeight: 'normal'}}>Tiket Wisatawan</p>
-                                            <b style={{fontSize: '18px', fontWeight: '800', marginLeft: '50px'}}>Total Harga</b>
-                                        </div>
-                                        <div class="col">
-                                            <p style={{fontSize: '18px', fontWeight: '800', paddingLeft: '70px'}}>{Harga[destinationId]}</p>
-                                            <b style={{ marginLeft: '70px'}}>RP.</b>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col">
+                            <h5 style={{paddingTop: '15px', marginLeft: '190px', color: 'gray'}}>Price</h5>
                         </div>
-                        <button className="btn-done"><Link to={`/buktiPembayaran?Id=${destinationId}`}>BOOK</Link></button>
+                        <div class="col">
+                            <h5 style={{paddingTop: '15px', marginLeft: '90px', color: 'gray'}}>Status</h5>
+                        </div>
+                        <hr />
                     </div>
                 </div>
             </div>
+            <div className="container text-start pembayaran2">
+              <div className="row align-items-center">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -218,4 +170,4 @@ function Payment3() {
   );
 }
 
-export default Payment3;
+export default CekTiket;

@@ -24,7 +24,7 @@ import palembangImage from '../assets/images/palembang.png';
 import semarangImage from '../assets/images/semarang.png';
 import logo_putihImage from '../assets/images/logo_putih.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaClock, FaUsers} from 'react-icons/fa'
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaClock, FaUsers, FaUserCircle} from 'react-icons/fa'
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
@@ -46,19 +46,20 @@ function Home() {
       <a className="navbar-brand" href="#">
             <img src={logo_putihImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '100px', height: '80px'}} />
           </a>
-        <ul className="inline-list">
+        <ul className="inline-list" style={{marginLeft: '160px'}}>
           <li><a href="#home">HOME</a></li>
           <li><a href="#aboutUs">ABOUT US</a></li>
           <li><a href="#destination">DESTINATION</a></li>
           <li><a href="#culture">CULTURE</a></li>
           <li><a href="#package">PACKAGE</a></li>
           <li><a href="#contactUs">CONTACT US</a></li>
-          <li><button className="btn-register" type="submit"><Link to="/register">SIGN UP</Link></button></li>
-          <li><button className="btn-login" type="submit"><Link to="/login">LOGIN</Link></button></li>
+          {/* <li><button className="btn-register" type="submit"><Link to="/register">SIGN UP</Link></button></li>
+          <li><button className="btn-login" type="submit"><Link to="/login">LOGIN</Link></button></li> */}
         </ul>
-        {/* <form className="d-flex" role="search">
+        <form className="d-flex" role="search" style={{marginLeft: '40px'}}>
               <input className="form-control me-2" type="search" placeholder="" aria-label="Search" />
-            </form> */}
+            </form>
+            <Link to="/profile"><FaUserCircle size="30px" style={{ marginLeft: "90px", color: 'white' }} /></Link>
       </div>
       </div>
 

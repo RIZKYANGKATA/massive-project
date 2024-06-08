@@ -20,6 +20,8 @@ import DetailPackages from './pages/detailPackages';
 import Qris from './pages/qris';
 import DoneBook from './pages/doneBook';
 import BuktiPembayaran from './pages/buktiPembayaran';
+import CekTiket from './pages/cekTiket';
+import Profile from './pages/profile';
 import { Route, Routes } from 'react-router-dom';
 
 import CekEmail from './components/cekEmail'
@@ -53,6 +55,8 @@ function App() {
         <Route path="/qris" element={<Qris/>} />
         <Route path="/buktiPembayaran" element={<BuktiPembayaran/>} />
         <Route path="/doneBook" element={<DoneBook/>} />
+        <Route path="/cekTiket" element={<CekTiket/>} />
+        <Route path="/profile" element={<Profile/>} />
       </Routes>
     </>
   );
