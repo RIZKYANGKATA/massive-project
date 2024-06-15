@@ -1,17 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import logo_putihImage from '../assets/images/logo_putih.png'
 import weh1Image from '../assets/images/weh1.jpg'
 import weh2Image from '../assets/images/weh2.jpg'
 import weh3Image from '../assets/images/weh3.jpg'
+import weh4Image from '../assets/images/weh4.jpg'
 import temanWisataImage from '../assets/images/temanWisata.png'
 import backgroundImage from '../assets/images/background.jpg'
 import bromoImage from '../assets/images/bromo.jpg'
 import pulauDerawanImage from '../assets/images/pulauDerawan.jpg'
-import der2Image from '../assets/images/der2.png'
-import der3Image from '../assets/images/der3.jpg'
-import der4Image from '../assets/images/der4.jpeg'
-import der5Image from '../assets/images/der5.jpg'
 import labuanBajoImage from '../assets/images/labuanBajo.jpg'
 import kawahIjenImage from '../assets/images/kawahIjen.jpg'
 import rajaAmpatImage from '../assets/images/rajaAmpat.jpg'
@@ -28,13 +25,31 @@ import {
   faPaperclip,
   faThumbsUp,
 } from '@fortawesome/free-solid-svg-icons'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 
 import '../components/css/detailDestinasi.css'
 import Card from '../components/card'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
-function Derawan() {
+function Detail() {
+  const [nama, setNama] = useState('')
+  const [harga, setHarga] = useState('')
+  const [informasi, setInformasi] = useState('')
+  const [daerah, setDaerah] = useState('')
+  const [file, setFile] = useState(null)
+  const { id } = useParams()
+
+  const getDetailDestinasi = async () => {
+    const response = await axios.get(`http://localhost:3000/destinasi/${id}`)
+
+    setNama(response.data.nama)
+    setHarga(response.data.harga)
+    setInformasi(response.data.informasi)
+    setDaerah(response.data.daerah)
+    setFile(response.data.url)
+  }
+
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -57,7 +72,9 @@ function Derawan() {
       }, 100)
     }
   }
-
+  useEffect(() => {
+    getDetailDestinasi()
+  }, [])
   return (
     <>
       <div id="home">
@@ -121,7 +138,7 @@ function Derawan() {
             <div class="col">
               <div className="gbr">
                 <img
-                  src={pulauDerawanImage}
+                  src={file}
                   alt="Teman Wisata"
                   className="d-inline-block align-text-top"
                 />
@@ -131,21 +148,21 @@ function Derawan() {
                   <div class="row align-items-center">
                     <div class="col">
                       <img
-                        src={pulauDerawanImage}
+                        src={weh1Image}
                         alt="Teman Wisata"
                         className="d-inline-block align-text-top"
                       />
                     </div>
                     <div class="col">
                       <img
-                        src={der2Image}
+                        src={weh2Image}
                         alt="Teman Wisata"
                         className="d-inline-block align-text-top"
                       />
                     </div>
                     <div class="col">
                       <img
-                        src={der3Image}
+                        src={weh3Image}
                         alt="Teman Wisata"
                         className="d-inline-block align-text-top"
                       />
@@ -156,23 +173,14 @@ function Derawan() {
             </div>
             <div class="col">
               <div className="dedes">
-                <h2>Pulau Derawan</h2>
-                <p>Kalimantan Timur</p>
+                <h2>{nama}</h2>
+                <p>{daerah}</p>
                 <p>
-                  Mulai Dari <b>RP 1000.000</b>
+                  Mulai Dari <b>RP {harga}</b>
                 </p>
                 <div className="info">
                   <h5>Details</h5>
-                  <p>
-                    Pulau Weh, yang terletak di ujung barat Indonesia di
-                    Provinsi Aceh, adalah surga tersembunyi dengan keindahan
-                    alam bawah laut yang menakjubkan dan pemandangan alam yang
-                    memukau.Pulau Weh menawarkan kombinasi sempurna antara
-                    keindahan alam bawah laut, pantai yang indah, dan aktivitas
-                    petualangan yang menarik. Dengan suasana yang tenang dan
-                    alami, Pulau Weh adalah destinasi yang ideal untuk berlibur
-                    dan melepaskan diri dari hiruk-pikuk kehidupan sehari-hari.
-                  </p>
+                  <p>{informasi}</p>
                   <ul>
                     <li>
                       <FaMapMarkerAlt /> <p>Pantai Iboih</p>
@@ -189,7 +197,7 @@ function Derawan() {
                   </ul>
                 </div>
                 <button className="btn-book-now" type="submit">
-                  <Link to="/payment?Id=3">BOOK NOW</Link>
+                  <Link to={`/payment/${id}`}>BOOK NOW</Link>
                 </button>
               </div>
             </div>
@@ -202,16 +210,16 @@ function Derawan() {
         <div class="container text-center">
           <div class="row align-items-center">
             <div class="col">
-              <img class="g1" src={der2Image} alt="Teman Wisata" />
+              <img class="g1" src={weh1Image} alt="Teman Wisata" />
             </div>
             <div class="col">
-              <img class="g2" src={der3Image} alt="Teman Wisata" />
+              <img class="g2" src={weh2Image} alt="Teman Wisata" />
               <div class="col">
-                <img class="g2" src={der4Image} alt="Teman Wisata" />
+                <img class="g2" src={weh3Image} alt="Teman Wisata" />
               </div>
             </div>
             <div class="col">
-              <img class="g3" src={der5Image} alt="Teman Wisata" />
+              <img class="g3" src={weh4Image} alt="Teman Wisata" />
             </div>
           </div>
         </div>
@@ -320,7 +328,7 @@ function Derawan() {
           </div>
         </div>
         <button className="btn-add-review" type="submit">
-          <Link to="/review?Id=3">ADD REVIEW</Link>
+          <Link to="/review?Id=1">ADD REVIEW</Link>
         </button>
       </div>
 
@@ -383,4 +391,4 @@ function Derawan() {
   )
 }
 
-export default Derawan
+export default Detail

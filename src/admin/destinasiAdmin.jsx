@@ -20,43 +20,40 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import '../components/css/admin.css'
 import axios from 'axios'
 
-function HistoryAdmin() {
-  const [pembayaran, setPembayaran] = useState([])
-  const [filteredPembayaran, setFilteredPembayaran] = useState([])
-  const [searchTransaksiId, setSearchTransaksiId] = useState('')
-  const [searchTanggal, setSearchTanggal] = useState('')
+function DestinasiAdmin() {
+  const [destinasi, datadestinasi] = useState([])
+
+  const getpembayaran = async () => {
+    try {
+      const response = await axios.get(`http://localhost:3000/destinasi`)
+      datadestinasi(response.data)
+    } catch (error) {
+      console.error('Error fetching data:', error)
+    }
+  }
 
   useEffect(() => {
-    const fetchPembayaran = async () => {
-      try {
-        const response = await axios.get('http://localhost:3000/pembayaran')
-        setPembayaran(response.data)
-      } catch (error) {
-        console.error('Error fetching data:', error)
-      }
-    }
-    fetchPembayaran()
+    getpembayaran()
   }, [])
 
-  useEffect(() => {
-    filterPembayaran()
-  }, [pembayaran, searchTransaksiId, searchTanggal])
+  const navigate = useNavigate()
 
-  const filterPembayaran = () => {
-    let filteredData = pembayaran.filter((item) => {
-      if (item.status_terima !== 'Sudah Diterima') return false // Exclude items with status not 'Sudah Diterima'
-      if (searchTransaksiId && item.no_transaksi !== searchTransaksiId)
-        return false // Check transaction ID
-      if (searchTanggal && item.tanggal !== searchTanggal) return false // Check transaction date
-      return true
-    })
-    setFilteredPembayaran(filteredData)
+  const handleadd = () => {
+    navigate('/tambahdestinasiadmin')
   }
 
-  const handleSearch = () => {
-    filterPembayaran()
+  const handleedit = (id) => {
+    navigate(`/editdestinasiadmin/${id}`)
   }
 
+  const handledelete = async (id) => {
+    try {
+      await axios.delete(`http://localhost:3000/destinasi/${id}`)
+      getpembayaran()
+    } catch (error) {
+      console.error('Error deleting data:', error)
+    }
+  }
   return (
     <>
       <div id="home">
@@ -100,59 +97,46 @@ function HistoryAdmin() {
       </div>
 
       <div className="admin">
-        <h1>RIWAYAT PEMBAYARAN</h1>
-        <div className="container text-center history">
-          <div className="row align-items-center">
-            <div className="col">
-              <input
-                className="form-control"
-                type="text"
-                placeholder="Nomor Transaksi"
-                value={searchTransaksiId}
-                onChange={(e) => setSearchTransaksiId(e.target.value)}
-              />
-            </div>
-            {/* <div className="col">
-              <input
-                className="form-control"
-                type="date"
-                placeholder="HH/BB/TTTT"
-                value={searchTanggal}
-                onChange={(e) => setSearchTanggal(e.target.value)}
-              />
-            </div> */}
-            <div className="col">
-              <button className="btn btn-primary" onClick={handleSearch}>
-                Cari
-              </button>
-            </div>
-          </div>
-          <div className="container text-center hisad">
-            <div className="row align-items-center">
-              <div className="col">
-                <h5>Nomor Transaksi</h5>
-              </div>
-              <div className="col">
-                <h5>Tanggal</h5>
-              </div>
-
-              <div className="col">
-                <h5>Nama</h5>
-              </div>
-              <div className="col">
-                <h5>Status</h5>
-              </div>
-            </div>
-            <hr />
-            {filteredPembayaran.map((item, index) => (
-              <div className="row align-items-center" key={index}>
-                <div className="col">{item.no_transaksi}</div>
-                <div className="col">{item.createdAt}</div>
-                <div className="col">{item.first_name}</div>
-                <div className="col">{item.status_terima}</div>
-              </div>
-            ))}
-          </div>
+        <h1>Destinasi</h1>
+        <button onClick={handleadd}>Tambah Destinasi</button>
+        <div className="container text-center informasi-admin">
+          <table className="table table-striped">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Harga</th>
+                <th>Informasi</th>
+                <th>Daerah</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              {destinasi.map((item, index) => (
+                <tr key={index}>
+                  <td>{index + 1}</td>
+                  <td>{item.nama}</td>
+                  <td>{item.harga}</td>
+                  <td>{item.informasi}</td>
+                  <td>{item.daerah}</td>
+                  <td>
+                    <button
+                      className="btn btn-primary"
+                      onClick={() => handleedit(item.id)}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => handledelete(item.id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
 
@@ -215,4 +199,4 @@ function HistoryAdmin() {
   )
 }
 
-export default HistoryAdmin
+export default DestinasiAdmin

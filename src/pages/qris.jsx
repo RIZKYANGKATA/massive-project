@@ -1,49 +1,53 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import logo_putihImage from '../assets/images/logo_putih.png';
-import backgroundImage from '../assets/images/background.jpg';
-import bromoImage from '../assets/images/bromo.jpg'; 
-import pulauDerawanImage from '../assets/images/pulauDerawan.jpg';
-import barCodeImage from '../assets/images/barCode.png';
-import b2Image from '../assets/images/b2.jpg';
-import labuanBajoImage from '../assets/images/labuanBajo.jpg';
-import divingLabaImage from '../assets/images/divingLaba.jpg'; 
-import candiImage from '../assets/images/candi.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import { faStar, faPaperclip, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-import { faUniversity, faBank } from '@fortawesome/free-solid-svg-icons';
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import logo_putihImage from '../assets/images/logo_putih.png'
+import backgroundImage from '../assets/images/background.jpg'
+import bromoImage from '../assets/images/bromo.jpg'
+import pulauDerawanImage from '../assets/images/pulauDerawan.jpg'
+import barCodeImage from '../assets/images/barCode.png'
+import b2Image from '../assets/images/b2.jpg'
+import labuanBajoImage from '../assets/images/labuanBajo.jpg'
+import divingLabaImage from '../assets/images/divingLaba.jpg'
+import candiImage from '../assets/images/candi.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import {
+  faStar,
+  faPaperclip,
+  faThumbsUp,
+} from '@fortawesome/free-solid-svg-icons'
+import { faUniversity, faBank } from '@fortawesome/free-solid-svg-icons'
 
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import '../components/css/payment.css';
-import levelNumber from '../components/levelNumber';
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import '../components/css/payment.css'
+import levelNumber from '../components/levelNumber'
 
 function Qris() {
-  const navigate = useNavigate();
-  const location = useLocation();
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const handleScroll = (event) => {
-    event.preventDefault();
-    const targetId = event.currentTarget.getAttribute("href").substring(1);
+    event.preventDefault()
+    const targetId = event.currentTarget.getAttribute('href').substring(1)
 
-    if (location.pathname === '/') {
-      const targetElement = document.getElementById(targetId);
+    if (location.pathname === '/homeuser') {
+      const targetElement = document.getElementById(targetId)
       if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
+        targetElement.scrollIntoView({ behavior: 'smooth' })
       }
     } else {
-      navigate('/');
+      navigate('/homeuser')
       setTimeout(() => {
-        const targetElement = document.getElementById(targetId);
+        const targetElement = document.getElementById(targetId)
         if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
+          targetElement.scrollIntoView({ behavior: 'smooth' })
         }
-      }, 100);
+      }, 100)
     }
-  };
+  }
 
-  const searchParams = new URLSearchParams(location.search);
-  const destinationId = searchParams.get('Id');
+  const searchParams = new URLSearchParams(location.search)
+  const destinationId = searchParams.get('Id')
 
   const imageMap = {
     '1': backgroundImage,
@@ -52,7 +56,7 @@ function Qris() {
     '4': labuanBajoImage,
     '5': divingLabaImage,
     '6': b2Image,
-  };
+  }
 
   const titleMap = {
     '1': 'Pulau Weh Aceh',
@@ -78,18 +82,52 @@ function Qris() {
         <div className="header fixed-top">
           <div className="navbar">
             <a className="navbar-brand" href="#">
-              <img src={logo_putihImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '100px', height: '80px' }} />
+              <img
+                src={logo_putihImage}
+                alt="Teman Wisata"
+                className="d-inline-block align-text-top"
+                style={{ width: '100px', height: '80px' }}
+              />
             </a>
             <ul className="inline-list">
-              <li><a href="#home" onClick={handleScroll}>HOME</a></li>
-              <li><a href="#aboutUs" onClick={handleScroll}>ABOUT US</a></li>
-              <li><a href="#destination" onClick={handleScroll}>DESTINATION</a></li>
-              <li><a href="#culture" onClick={handleScroll}>CULTURE</a></li>
-              <li><a href="#package" onClick={handleScroll}>PACKAGE</a></li>
-              <li><a href="#contactUs" onClick={handleScroll}>CONTACT US</a></li>
+              <li>
+                <a href="#home" onClick={handleScroll}>
+                  HOME
+                </a>
+              </li>
+              <li>
+                <a href="#aboutUs" onClick={handleScroll}>
+                  ABOUT US
+                </a>
+              </li>
+              <li>
+                <a href="#destination" onClick={handleScroll}>
+                  DESTINATION
+                </a>
+              </li>
+              <li>
+                <a href="#culture" onClick={handleScroll}>
+                  CULTURE
+                </a>
+              </li>
+              <li>
+                <a href="#package" onClick={handleScroll}>
+                  PACKAGE
+                </a>
+              </li>
+              <li>
+                <a href="#contactUs" onClick={handleScroll}>
+                  CONTACT US
+                </a>
+              </li>
             </ul>
             <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="" aria-label="Search" />
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder=""
+                aria-label="Search"
+              />
             </form>
           </div>
         </div>
@@ -100,60 +138,138 @@ function Qris() {
         <div className="card payment">
           <div className="card-body">
             <div className="pembayaran">
-              <h3 style={{ textAlign: 'start', paddingLeft: '20px', paddingTop: '30px' }}>Scan QR Code</h3>
+              <h3
+                style={{
+                  textAlign: 'start',
+                  paddingLeft: '20px',
+                  paddingTop: '30px',
+                }}
+              >
+                Scan QR Code
+              </h3>
             </div>
             <div className="container text-start pembayaran2">
               <div className="row align-items-center">
-                <div className="col" style={{paddingBottom: '95px'}}>
+                <div className="col" style={{ paddingBottom: '95px' }}>
                   <div className="card">
                     <div className="card-body">
                       <div className="form-check form-check-inline">
-                        <label className="form-check-label" htmlFor="inlineRadio2">
+                        <label
+                          className="form-check-label"
+                          htmlFor="inlineRadio2"
+                        >
                           <h6>QRIS</h6>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div className="qris" style={{ marginTop: '30px', height: '337px' }}>
+                  <div
+                    className="qris"
+                    style={{ marginTop: '30px', height: '337px' }}
+                  >
                     <div className="card-body">
-                      <img src={barCodeImage} alt="Bar Code" className="d-inline-block align-text-top" style={{ width: '265px', height: '251px', marginLeft: '95px', marginTop: '25px' }} />
+                      <img
+                        src={barCodeImage}
+                        alt="Bar Code"
+                        className="d-inline-block align-text-top"
+                        style={{
+                          width: '265px',
+                          height: '251px',
+                          marginLeft: '95px',
+                          marginTop: '25px',
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
-                    <div class="col">
-                            <div class="card" style={{marginTop: '-110px', height: '420px'}}>
-                                <h3 style={{marginTop: '20px', marginLeft: '20px'}}>Ringkasan Tiket Anda</h3>
-                                <div class="card-body">
-                                    <div class="container text-center">
-                                        <div class="row align-items-center">
-                                            <div class="col">
-                                                <img src={imageMap[destinationId]} alt="Destination" style={{height: '120px', width: '250px', marginTop: '10px', marginRight: '-70px' }}/>
-                                            </div>
-                                            <div class="col">
-                                                <p style={{fontSize: '18px',marginTop: '-60px', color: '#021526'}}><b>{titleMap[destinationId]}</b></p>
-                                                <p style={{fontSize: '18px', marginTop: '-60px', color: '#021526', marginLeft: '-20px'}}><b>Tanggal Pergi</b></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="container text-start">
-                                    <div class="row align-items-center" style={{paddingBottom: '80px'}}>
-                                        <div class="col">
-                                            <p style={{fontSize: '18px', fontWeight: 'normal'}}>Tiket Wisatawan</p>
-                                            <b style={{fontSize: '18px', fontWeight: '800', marginLeft: '50px'}}>Total Harga</b>
-                                        </div>
-                                        <div class="col">
-                                            <p style={{fontSize: '18px', fontWeight: '800', paddingLeft: '70px'}}>{Harga[destinationId]}</p>
-                                            <b style={{ marginLeft: '70px'}}>RP.</b>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col">
+                  <div
+                    class="card"
+                    style={{ marginTop: '-110px', height: '420px' }}
+                  >
+                    <h3 style={{ marginTop: '20px', marginLeft: '20px' }}>
+                      Ringkasan Tiket Anda
+                    </h3>
+                    <div class="card-body">
+                      <div class="container text-center">
+                        <div class="row align-items-center">
+                          <div class="col">
+                            <img
+                              src={imageMap[destinationId]}
+                              alt="Destination"
+                              style={{
+                                height: '120px',
+                                width: '250px',
+                                marginTop: '10px',
+                                marginRight: '-70px',
+                              }}
+                            />
+                          </div>
+                          <div class="col">
+                            <p
+                              style={{
+                                fontSize: '18px',
+                                marginTop: '-60px',
+                                color: '#021526',
+                              }}
+                            >
+                              <b>{titleMap[destinationId]}</b>
+                            </p>
+                            <p
+                              style={{
+                                fontSize: '18px',
+                                marginTop: '-60px',
+                                color: '#021526',
+                                marginLeft: '-20px',
+                              }}
+                            >
+                              <b>Tanggal Pergi</b>
+                            </p>
+                          </div>
                         </div>
-                        <button className="btn-done"><Link to={`/doneBook?Id=${destinationId}`}>BOOK</Link></button>
+                      </div>
                     </div>
+                    <div class="container text-start">
+                      <div
+                        class="row align-items-center"
+                        style={{ paddingBottom: '80px' }}
+                      >
+                        <div class="col">
+                          <p style={{ fontSize: '18px', fontWeight: 'normal' }}>
+                            Tiket Wisatawan
+                          </p>
+                          <b
+                            style={{
+                              fontSize: '18px',
+                              fontWeight: '800',
+                              marginLeft: '50px',
+                            }}
+                          >
+                            Total Harga
+                          </b>
+                        </div>
+                        <div class="col">
+                          <p
+                            style={{
+                              fontSize: '18px',
+                              fontWeight: '800',
+                              paddingLeft: '70px',
+                            }}
+                          >
+                            {Harga[destinationId]}
+                          </p>
+                          <b style={{ marginLeft: '70px' }}>RP.</b>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <button className="btn-done">
+                  <Link to={`/doneBook?Id=${destinationId}`}>BOOK</Link>
+                </button>
+              </div>
             </div>
+          </div>
         </div>
       </div>
 
@@ -161,16 +277,25 @@ function Qris() {
         <div className="container">
           <div className="row">
             <div className="col text-start d-flex flex-column justify-content-center">
-              <img src={logo_putihImage} alt="Teman Wisata" className="d-inline-block align-text-top" style={{ width: '90px', height: '70px', margin: '0', padding: '0' }} />
+              <img
+                src={logo_putihImage}
+                alt="Teman Wisata"
+                className="d-inline-block align-text-top"
+                style={{
+                  width: '90px',
+                  height: '70px',
+                  margin: '0',
+                  padding: '0',
+                }}
+              />
               <div className="conten1">
                 <h5>Sebuah Cerita Sederhana Tentang</h5>
                 <h5>Pusat Layanan Pariwisata di </h5>
                 <h5>Indonesia</h5>
               </div>
               <div className="conten2">
-                Aplikasi travel dan tourism dengan beragam layanan
-                dan informasi terpercaya, agar perjalanan anda
-                nyaman.
+                Aplikasi travel dan tourism dengan beragam layanan dan informasi
+                terpercaya, agar perjalanan anda nyaman.
               </div>
             </div>
             <div className="col">
@@ -179,15 +304,22 @@ function Qris() {
               <p>Jangan ragu untuk menghubungi dan menghubungi kami !!</p>
               <div className="infomasi">
                 <div className="wa">
-                  <FaWhatsapp style={{ marginLeft: '15px' }} /> <p>+62 813 0989 5630</p>
+                  <FaWhatsapp style={{ marginLeft: '15px' }} />{' '}
+                  <p>+62 813 0989 5630</p>
                 </div>
 
                 <div className="email">
-                  <FaEnvelope style={{ marginLeft: '15px' }} /> <p>temanwisata@gmail.com</p>
+                  <FaEnvelope style={{ marginLeft: '15px' }} />{' '}
+                  <p>temanwisata@gmail.com</p>
                 </div>
 
                 <div className="lokasi">
-                  <FaMapMarkerAlt style={{ marginLeft: '15px' }} /> <p>Perkantoran Hijau Arkadia, Tower G, Jl. TB Simatupang No.88, RT.1/RW.1, Kebagusan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12520</p>
+                  <FaMapMarkerAlt style={{ marginLeft: '15px' }} />{' '}
+                  <p>
+                    Perkantoran Hijau Arkadia, Tower G, Jl. TB Simatupang No.88,
+                    RT.1/RW.1, Kebagusan, Kota Jakarta Selatan, Daerah Khusus
+                    Ibukota Jakarta 12520
+                  </p>
                 </div>
               </div>
             </div>
@@ -197,7 +329,7 @@ function Qris() {
         <h6>Copyright 2024 PT Berkelana Teman Wisata</h6>
       </div>
     </>
-  );
+  )
 }
 
-export default Qris;
+export default Qris

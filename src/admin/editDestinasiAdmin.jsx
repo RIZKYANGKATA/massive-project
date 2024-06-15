@@ -16,45 +16,69 @@ import {
   FaShoppingBag,
 } from 'react-icons/fa'
 
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import '../components/css/admin.css'
 import axios from 'axios'
 
-function HistoryAdmin() {
-  const [pembayaran, setPembayaran] = useState([])
-  const [filteredPembayaran, setFilteredPembayaran] = useState([])
-  const [searchTransaksiId, setSearchTransaksiId] = useState('')
-  const [searchTanggal, setSearchTanggal] = useState('')
+function EditDestinasiAdmin() {
+  const { idparams } = useParams() // Get the id from the route parameters
+  const [nama, setNama] = useState('')
+  const [harga, setHarga] = useState('')
+  const [informasi, setInformasi] = useState('')
+  const [daerah, setDaerah] = useState('')
+  const [image, setImage] = useState(null)
+  const [file, setFile] = useState(null)
+  const navigate = useNavigate()
 
-  useEffect(() => {
-    const fetchPembayaran = async () => {
-      try {
-        const response = await axios.get('http://localhost:3000/pembayaran')
-        setPembayaran(response.data)
-      } catch (error) {
-        console.error('Error fetching data:', error)
-      }
+  const getDestinasi = async () => {
+    try {
+      const response = await axios.get(
+        `http://localhost:3000/destinasi/${idparams}`,
+      )
+      const data = response.data
+      setNama(data.nama)
+      setHarga(data.harga)
+      setInformasi(data.informasi)
+      setDaerah(data.daerah)
+      setFile(data.url) // Assuming the image URL is stored in 'url'
+    } catch (error) {
+      console.error('Error fetching data:', error)
     }
-    fetchPembayaran()
-  }, [])
-
-  useEffect(() => {
-    filterPembayaran()
-  }, [pembayaran, searchTransaksiId, searchTanggal])
-
-  const filterPembayaran = () => {
-    let filteredData = pembayaran.filter((item) => {
-      if (item.status_terima !== 'Sudah Diterima') return false // Exclude items with status not 'Sudah Diterima'
-      if (searchTransaksiId && item.no_transaksi !== searchTransaksiId)
-        return false // Check transaction ID
-      if (searchTanggal && item.tanggal !== searchTanggal) return false // Check transaction date
-      return true
-    })
-    setFilteredPembayaran(filteredData)
   }
 
-  const handleSearch = () => {
-    filterPembayaran()
+  useEffect(() => {
+    getDestinasi()
+  }, [idparams])
+
+  const handleImageUpload = (e) => {
+    setImage(e.target.files[0])
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const formData = new FormData()
+    formData.append('nama', nama)
+    formData.append('harga', harga)
+    formData.append('informasi', informasi)
+    formData.append('daerah', daerah)
+    if (image) {
+      formData.append('image', image)
+    }
+
+    try {
+      await axios.patch(
+        `http://localhost:3000/destinasi/${idparams}`,
+        formData,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        },
+      )
+      navigate('/destinasiadmin')
+    } catch (error) {
+      console.error('Error submitting form:', error)
+    }
   }
 
   return (
@@ -100,60 +124,78 @@ function HistoryAdmin() {
       </div>
 
       <div className="admin">
-        <h1>RIWAYAT PEMBAYARAN</h1>
-        <div className="container text-center history">
-          <div className="row align-items-center">
-            <div className="col">
-              <input
-                className="form-control"
-                type="text"
-                placeholder="Nomor Transaksi"
-                value={searchTransaksiId}
-                onChange={(e) => setSearchTransaksiId(e.target.value)}
-              />
-            </div>
-            {/* <div className="col">
-              <input
-                className="form-control"
-                type="date"
-                placeholder="HH/BB/TTTT"
-                value={searchTanggal}
-                onChange={(e) => setSearchTanggal(e.target.value)}
-              />
-            </div> */}
-            <div className="col">
-              <button className="btn btn-primary" onClick={handleSearch}>
-                Cari
-              </button>
-            </div>
+        <h1>EDIT DESTINASI</h1>
+        <form className="form-admin" onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="namaInput" className="form-label id-admin">
+              Nama
+            </label>
+            <input
+              type="text"
+              className="form-control id-admin"
+              id="namaInput"
+              placeholder="Masukkan Nama"
+              value={nama}
+              onChange={(e) => setNama(e.target.value)}
+              required
+            />
           </div>
-          <div className="container text-center hisad">
-            <div className="row align-items-center">
-              <div className="col">
-                <h5>Nomor Transaksi</h5>
-              </div>
-              <div className="col">
-                <h5>Tanggal</h5>
-              </div>
-
-              <div className="col">
-                <h5>Nama</h5>
-              </div>
-              <div className="col">
-                <h5>Status</h5>
-              </div>
-            </div>
-            <hr />
-            {filteredPembayaran.map((item, index) => (
-              <div className="row align-items-center" key={index}>
-                <div className="col">{item.no_transaksi}</div>
-                <div className="col">{item.createdAt}</div>
-                <div className="col">{item.first_name}</div>
-                <div className="col">{item.status_terima}</div>
-              </div>
-            ))}
+          <div className="mb-3">
+            <label htmlFor="hargaInput" className="form-label nama-admin">
+              Harga
+            </label>
+            <input
+              type="number"
+              className="form-control nama-admin"
+              id="hargaInput"
+              placeholder="Masukkan Harga"
+              value={harga}
+              onChange={(e) => setHarga(e.target.value)}
+              required
+            />
           </div>
-        </div>
+          <div className="mb-3">
+            <label htmlFor="informasiInput" className="form-label foto-admin">
+              Informasi
+            </label>
+            <input
+              type="text"
+              className="form-control foto-admin"
+              id="informasiInput"
+              value={informasi}
+              onChange={(e) => setInformasi(e.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="daerahInput" className="form-label username-admin">
+              Daerah
+            </label>
+            <input
+              type="text"
+              className="form-control username-admin"
+              id="daerahInput"
+              placeholder="Masukkan Daerah"
+              value={daerah}
+              onChange={(e) => setDaerah(e.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="imageInput" className="form-label password-admin">
+              Image
+            </label>
+            <input
+              type="file"
+              className="form-control password-admin"
+              id="imageInput"
+              onChange={handleImageUpload}
+            />
+          </div>
+          <button className="btn-simpan-admin" type="submit">
+            SIMPAN
+          </button>
+        </form>
       </div>
 
       <div id="contactUs">
@@ -215,4 +257,4 @@ function HistoryAdmin() {
   )
 }
 
-export default HistoryAdmin
+export default EditDestinasiAdmin
